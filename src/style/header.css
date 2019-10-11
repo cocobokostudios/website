@@ -1,0 +1,36 @@
+.header {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    height: 100vh;
+    padding: 0 0.5em;
+
+    background-color: var(--main-black-color);
+    color: var(--main-gray-color);
+    font-weight: bolder;
+}
+
+.header .content {
+    max-width: 90vw;
+}
+
+.header section {
+    margin: 1em 0;
+}
+
+.header nav a {
+    color: var(--main-white-color);
+    text-decoration: underline;
+}
+
+.header nav a:visited {
+    color: var(--main-offwhite-color);
+}
+
+.header nav a:hover {
+    color: var(--main-green-color);
+}
+
+.header .highlight {
+    color: var(--main-offwhite-color);
+}

@@ -1,0 +1,47 @@
+[
+    {
+        "id": "instagram",
+        "display": "Instagram",
+        "url": "https://instagram.com/davidwesst"
+    },
+    {
+        "id": "igtv",
+        "display": "IGTV",
+        "url": "https://www.instagram.com/davidwesst/channel/"
+    },
+    {
+        "id": "twitter",
+        "display": "Twitter",
+        "url": "https://twitter.com/davidwesst"
+    },
+    {
+        "id": "twitch",
+        "display": "Twitch",
+        "url": "https://twitch.tv/davidwesst"
+    },
+    {
+        "id": "mixer",
+        "display": "Mixer",
+        "url": "https://mixer.com/davidwesst"
+    },
+    {
+        "id": "youtube",
+        "display": "YouTube",
+        "url": "https://youtube.com/davidwesst"
+    },
+    {
+        "id": "linkedin",
+        "display": "LinkedIn",
+        "url": "https://ca.linkedin.com/in/davidwesst"
+    },
+    {
+        "id": "facebook",
+        "display": "Facebook",
+        "url": "https://facebook.com/davidwesst"
+    },
+    {
+        "id": "github",
+        "display": "GitHub",
+        "url": "https://github.com/davidwesst"
+    }
+]

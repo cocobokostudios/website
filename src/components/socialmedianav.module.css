@@ -1,0 +1,11 @@
+.links {
+    display: flex;
+    flex-flow: row;
+    flex-flow: wrap;
+    justify-content: flex-start;
+    font-size: var(--main-sml-font);
+}
+
+.links a {
+    margin: 0.5em;
+}

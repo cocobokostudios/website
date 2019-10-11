@@ -1,0 +1,73 @@
+:root {
+    --main-white-color: rgb(250,250,250);
+    --main-offwhite-color: rgb(200,200,200);
+    --main-gray-color: rgb(100,100,100);
+    --main-black-color: rgb(25,25,25);
+    --main-green-color: rgb(0, 255, 0);
+    --main-pink-color: rgb(255,0,255);
+    --main-amber-color: rgb(255,191,0);
+
+    --main-xlrg-font: 2em;
+    --main-lrg-font: 1.5em;
+    --main-med-font: 1em;
+    --main-sml-font: 0.5em;
+}
+
+html, body, h1, h2, h3, h4, h5, h6, div, article, section, main {
+    /* reset spacing */
+    margin: 0;
+    padding: 0;
+    font-size: 16pt;
+}
+
+html, body {
+    font-family: 'Open Sans';
+    color: var(--main-black-color);
+    background-color: var(--main-white-color);
+}
+
+main {
+    margin: 6em 2em;
+}
+
+main section {
+    margin: 1em 0;
+}
+
+h1,h2,h3,h4,h5,h6, .emphasis {
+    font-family: 'Raleway';
+}
+
+h1 {
+    font-size: var(--main-xlrg-font);
+}
+
+h2 {
+    font-size: var(--main-lrg-font);
+}
+
+h3, h4, h5, h6 {
+    font-size: var(--main-med-font);
+}
+
+a {
+    color: var(--main-black-color);
+    text-decoration: underline;
+}
+
+a:visited {
+    color: var(--main-black-color);
+}
+
+a:hover {
+    color: var(--main-green-color);
+}
+
+.highlight {
+    color: var(--main-offwhite-color);
+}
+
+a.highlight:hover {
+    color: var(--main-white-color);
+}
+
