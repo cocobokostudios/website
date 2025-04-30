@@ -1,0 +1,40 @@
+---
+import featuredContent from '../data/featured-content.json';
+---
+
+<section class="py-16 bg-slate-800 text-white">
+    <div class="container mx-auto px-4">
+        <h2 class="text-4xl font-bold mb-16 text-center">Featured Content</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            {featuredContent.map(item => (
+                <a href={item.url} class="group">
+                    <div class="relative bg-gray-900 rounded-lg overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-lg hover:shadow-white/50 hover:bg-gradient-to-b hover:from-gray-900 hover:to-gray-800/40">
+                        <div class="absolute inset-0 bg-white/0 group-hover:bg-white/5 rounded-lg transition-all duration-300"></div>
+                        <div class="relative aspect-[3/2]">
+                            <img 
+                                src={item.imageUrl} 
+                                alt={item.imageAlt} 
+                                class="w-full h-full object-cover"
+                            />
+                        </div>
+                        <div class="relative p-6">
+                            <span class={`inline-block bg-${item.typeColor}-600 text-white text-xs font-bold px-2 py-1 rounded mb-4`}>
+                                {item.type}
+                            </span>
+                            <h3 class="text-xl font-semibold mb-2">{item.title}</h3>
+                            <p class="text-gray-400">{item.description}</p>
+                            <div class="mt-4 text-sm text-gray-500">
+                                {new Date(item.date).toLocaleDateString('en-US', { 
+                                    month: 'long',
+                                    day: 'numeric',
+                                    year: 'numeric'
+                                })} • {item.metadata}
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            ))}
+        </div>
+    </div>
+</section>
