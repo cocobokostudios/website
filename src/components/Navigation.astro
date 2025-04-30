@@ -1,16 +1,59 @@
 ---
 ---
 
-<nav class="flex items-center justify-between p-6 bg-slate-900">
-    <div class="flex items-center">
-        <div class="w-8 h-8 bg-purple-600 rounded-full"></div>
-        <span class="ml-2 text-xl text-white font-semibold">Cocoboko Studios</span>
+<nav class="w-full bg-slate-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+            <div class="flex items-center">
+                <div class="w-8 h-8 bg-purple-600 rounded-full"></div>
+                <span class="ml-2 text-xl text-white font-semibold">Cocoboko Studios</span>
+            </div>
+            
+            <!-- Mobile menu button -->
+            <button 
+                id="mobile-menu-button" 
+                class="md:hidden inline-flex items-center justify-center p-2 rounded-md text-white hover:text-purple-400"
+                aria-label="Main menu"
+            >
+                <svg id="menu-icon" class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" class="hidden" />
+                </svg>
+            </button>
+
+            <!-- Desktop menu -->
+            <div class="hidden md:flex md:gap-8">
+                <a href="/about" class="text-white hover:text-purple-400">About</a>
+                <a href="/blog" class="text-white hover:text-purple-400">Blog</a>
+                <a href="/youtube" class="text-white hover:text-purple-400">YouTube</a>
+                <a href="/games" class="text-white hover:text-purple-400">Games</a>
+                <a href="/newsletter" class="text-white hover:text-purple-400">Newsletter</a>
+            </div>
+        </div>
     </div>
-    <div class="flex gap-8">
-        <a href="/about" class="text-white hover:text-purple-400">About</a>
-        <a href="/blog" class="text-white hover:text-purple-400">Blog</a>
-        <a href="/youtube" class="text-white hover:text-purple-400">YouTube</a>
-        <a href="/games" class="text-white hover:text-purple-400">Games</a>
-        <a href="/newsletter" class="text-white hover:text-purple-400">Newsletter</a>
+
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="hidden md:hidden">
+        <div class="px-2 pt-2 pb-3 space-y-1">
+            <a href="/about" class="block px-3 py-2 text-white hover:text-purple-400">About</a>
+            <a href="/blog" class="block px-3 py-2 text-white hover:text-purple-400">Blog</a>
+            <a href="/youtube" class="block px-3 py-2 text-white hover:text-purple-400">YouTube</a>
+            <a href="/games" class="block px-3 py-2 text-white hover:text-purple-400">Games</a>
+            <a href="/newsletter" class="block px-3 py-2 text-white hover:text-purple-400">Newsletter</a>
+        </div>
     </div>
 </nav>
+
+<script>
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuIcon = document.getElementById('menu-icon');
+
+    if (mobileMenuButton && mobileMenu && menuIcon) {
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            const paths = menuIcon.querySelectorAll('path');
+            paths.forEach(path => path.classList.toggle('hidden'));
+        });
+    }
+</script>
