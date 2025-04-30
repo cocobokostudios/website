@@ -1,0 +1,32 @@
+[
+  {
+    "title": "Facebook",
+    "url": "https://facebook.com",
+    "icon": "FB",
+    "description": "Follow us on Facebook"
+  },
+  {
+    "title": "Twitter",
+    "url": "https://twitter.com",
+    "icon": "TW",
+    "description": "Follow us on Twitter"
+  },
+  {
+    "title": "Instagram",
+    "url": "https://instagram.com",
+    "icon": "IG",
+    "description": "Follow us on Instagram"
+  },
+  {
+    "title": "YouTube",
+    "url": "https://youtube.com",
+    "icon": "YT",
+    "description": "Subscribe to our YouTube channel"
+  },
+  {
+    "title": "Discord",
+    "url": "https://discord.com",
+    "icon": "DC",
+    "description": "Join our Discord community"
+  }
+]
