@@ -1,0 +1,69 @@
+---
+import socialLinks from '../data/social-links.json';
+import games from '../data/games.json';
+---
+
+<footer class="bg-slate-900 text-white py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div class="space-y-4">
+                <h3 class="text-purple-500 font-semibold text-lg">Cocoboko Studios</h3>
+                <p class="text-gray-400 text-sm">Creating immersive gaming experiences that inspire, challenge, and entertain.</p>
+            </div>
+
+            <div>
+                <h4 class="text-white font-semibold mb-4">Quick Links</h4>
+                <ul class="space-y-2">
+                    <li><a href="/about" class="text-gray-400 hover:text-purple-400">About Us</a></li>
+                    <li><a href="/blog" class="text-gray-400 hover:text-purple-400">Blog</a></li>
+                    <li><a href="/youtube" class="text-gray-400 hover:text-purple-400">YouTube</a></li>
+                    <li><a href="/games" class="text-gray-400 hover:text-purple-400">Games</a></li>
+                    <li><a href="/newsletter" class="text-gray-400 hover:text-purple-400">Newsletter</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-white font-semibold mb-4">Our Games</h4>
+                <ul class="space-y-2">
+                    {games.map(game => (
+                        <li>
+                            <a 
+                                href={`/games/${game.title.toLowerCase().replace(/\s+/g, '-')}`} 
+                                class="text-gray-400 hover:text-purple-400"
+                            >
+                                {game.title}
+                            </a>
+                        </li>
+                    ))}
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-white font-semibold mb-4">Contact</h4>
+                <ul class="space-y-2">
+                    <li>
+                        <a href="mailto:hello@cocobokostudios.com" class="text-gray-400 hover:text-purple-400">
+                            hello@cocobokostudios.com
+                        </a>
+                    </li>
+                    {socialLinks.map(link => (
+                        <li>
+                            <a 
+                                href={link.url} 
+                                title={link.title}
+                                class="text-gray-400 hover:text-purple-400"
+                                aria-label={link.description}
+                            >
+                                {link.title}
+                            </a>
+                        </li>
+                    ))}
+                </ul>
+            </div>
+        </div>
+        
+        <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400 text-sm">
+            <p>&copy; {new Date().getFullYear()} Cocoboko Studios. All Rights Reserved.</p>
+        </div>
+    </div>
+</footer>
