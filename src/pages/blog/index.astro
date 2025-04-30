@@ -1,0 +1,63 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navigation from '../../components/Navigation.astro';
+import Footer from '../../components/Footer.astro';
+import { getCollection } from 'astro:content';
+import type { CollectionEntry } from 'astro:content';
+
+const posts: CollectionEntry<'blog'>[] = (await getCollection('blog')).sort(
+    (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+);
+const base = import.meta.env.BASE_URL;
+---
+
+<Layout title="Blog - Cocoboko Studios">
+    <Navigation />
+    
+    <main class="bg-slate-800 min-h-screen text-white py-16">
+        <div class="max-w-6xl mx-auto px-4">
+            <h1 class="text-4xl font-bold mb-12">Latest Blog Posts</h1>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                {posts.map((post: CollectionEntry<'blog'>) => (
+                    <article class="bg-gray-900 rounded-lg overflow-hidden shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:shadow-white/20">
+                        {post.data.image && (
+                            <img 
+                                src={`${base}${post.data.image.url}`} 
+                                alt={post.data.image.alt}
+                                class="w-full h-48 object-cover"
+                            />
+                        )}
+                        <div class="p-6">
+                            <h2 class="text-2xl font-bold mb-2">
+                                <a href={`${base}/blog/${post.slug}`} class="hover:text-purple-400 transition-colors">
+                                    {post.data.title}
+                                </a>
+                            </h2>
+                            <div class="text-gray-400 text-sm mb-4">
+                                <time datetime={post.data.pubDate.toISOString()}>
+                                    {new Date(post.data.pubDate).toLocaleDateString('en-us', {
+                                        year: 'numeric',
+                                        month: 'long',
+                                        day: 'numeric',
+                                    })}
+                                </time>
+                                <span class="mx-2">•</span>
+                                <span>{post.data.author}</span>
+                            </div>
+                            <p class="text-gray-300 mb-4">{post.data.description}</p>
+                            <a 
+                                href={`${base}/blog/${post.slug}`}
+                                class="inline-block bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-full text-sm transition-colors"
+                            >
+                                Read More
+                            </a>
+                        </div>
+                    </article>
+                ))}
+            </div>
+        </div>
+    </main>
+
+    <Footer />
+</Layout>
