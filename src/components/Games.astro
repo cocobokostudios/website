@@ -8,15 +8,15 @@ const itemsInLastRow = totalItems % itemsPerRow;
 const hasOddLastRow = itemsInLastRow === 1;
 ---
 
-<section class="py-12 bg-gray-900 text-white">
+<section class="py-16 bg-gray-900 text-white">
   <div class="container mx-auto px-4">
-    <h2 class="text-3xl font-bold mb-8">Our Games</h2>
-    <div class={`grid grid-cols-1 md:grid-cols-6 gap-8 ${games.length === 1 ? 'place-items-center' : ''}`}>
+    <h2 class="text-4xl font-bold mb-8 text-center">Our Games</h2>
+    <div class={`grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto`}>
       {games.map((game, index) => (
         <div class={`relative bg-gray-800 p-6 rounded-lg shadow-md transition-all duration-300 ease-in-out hover:-translate-y-2 hover:shadow-lg hover:shadow-white/50 hover:bg-gradient-to-b hover:from-gray-800 hover:to-gray-700/40 group w-full ${
-          games.length === 1 ? 'md:col-start-2 md:col-span-4' : 
-          (hasOddLastRow && index === games.length - 1) ? 'md:col-start-2 md:col-span-3' : 
-          'md:col-span-3'
+          games.length === 1 ? 'md:col-span-2' : 
+          (hasOddLastRow && index === games.length - 1) ? 'md:col-span-2' : 
+          ''
         }`}>
           <div class="absolute inset-0 bg-white/0 group-hover:bg-white/5 rounded-lg transition-all duration-300"></div>
           <img src={game.imageURL} alt={game.title} class="relative w-full h-48 object-cover rounded-md mb-4" />
