@@ -45,18 +45,6 @@ jobs:
       pages: write
       id-token: write
     steps:
-      - name: Install OIDC Client from Core Package
-        run: npm install @actions/core@1.6.0 @actions/http-client
-
-      - name: Get Id Token
-        uses: actions/github-script@v6
-        id: idtoken
-        with:
-           script: |
-               const coredemo = require('@actions/core')
-               return await coredemo.getIDToken()
-           result-encoding: string
-
       - name: Download build artifacts
         uses: actions/download-artifact@v4
         with:
