@@ -1,20 +1,8 @@
 [
   {
-    "title": "Quantum Nexus",
-    "status": "Coming Soon",
-    "description": "A puzzle platformer that plays with reality and time. Solve intricate puzzles by manipulating the quantum field around you.",
-    "imageURL": "https://picsum.photos/800/600?random=1"
-  },
-  {
-    "title": "Starlight Odyssey",
-    "status": "In Development",
-    "description": "An epic space adventure RPG where your choices shape the fate of the galaxy. Explore uncharted worlds and forge alliances.",
-    "imageURL": "https://picsum.photos/800/600?random=2"
-  },
-  {
-    "title": "Whispers of Eldoria",
+    "title": "Charter",
     "status": "Concept Phase",
-    "description": "A narrative-driven fantasy adventure set in a world where magic is returning after centuries of dormancy.",
-    "imageURL": "https://picsum.photos/800/600?random=3"
+    "description": "Charter is a cozy management exploration game set in a world where humans are the creatives and birds command the skies, inviting players to launch the first human‑run airline charter to pursue their dream of flight and carve out a place among the clouds.",
+    "imageURL": "/images/mark-olsen-K5j1KgecVC8-unsplash.jpg"
   }
 ]
