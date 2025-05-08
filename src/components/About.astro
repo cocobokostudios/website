@@ -1,5 +1,6 @@
 ---
 import socialLinks from '../data/social-links.json';
+import { Icon } from '@iconify/react';
 ---
 
 <section class="bg-gray-900 py-20">
@@ -30,10 +31,11 @@ import socialLinks from '../data/social-links.json';
                         <a 
                             href={link.url} 
                             title={link.title} 
-                            class="text-white bg-slate-700 hover:bg-slate-600 rounded-full px-4 py-2 text-sm"
+                            class={`text-white ${link.brandColor} hover:opacity-90 rounded-full p-3 text-xl transition-opacity duration-200`}
+                            target="_blank"
                             aria-label={link.description}
                         >
-                            {link.icon}
+                            <Icon client:load icon={link.icon} />
                         </a>
                     ))}
                 </div>
