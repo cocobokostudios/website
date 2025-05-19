@@ -1,6 +1,7 @@
 [
   {
     "title": "Kiosk",
+    "projectKey": "project-kiosk",
     "status": "Concept Phase",
     "description": "Kiosk is a cozy management game where you run the first human-operated airport kiosk, bucking trends both economically and technologically, all with a focus on creating a welcoming environment and connecting with travellers from all over the world.",
     "imageURL": "/images/mark-olsen-K5j1KgecVC8-unsplash.jpg"

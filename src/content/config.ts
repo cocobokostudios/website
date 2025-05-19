@@ -9,6 +9,8 @@ const blogSchema = z.object({
         url: z.string(),
         alt: z.string()
     }).optional(),
+    category: z.enum(['devlog', 'news', 'tutorial']).optional(),
+    tags: z.array(z.string()).optional(),
 });
 
 export type BlogPost = z.infer<typeof blogSchema>;

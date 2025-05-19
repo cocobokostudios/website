@@ -1,0 +1,13 @@
+---
+import GamePage from '../../layouts/GamePage.astro';
+import games from '../../data/games.json';
+
+// Get the game by its title, case-insensitive
+const kioskData = games.find(game => game.title.toLowerCase() === 'kiosk');
+
+if (!kioskData) {
+    throw new Error('Kiosk game data not found');
+}
+---
+
+<GamePage gameData={kioskData} />
