@@ -1,6 +1,6 @@
 ---
 title: "Kiosk Devlog #1: Kiosk Development (and Devlog) Begins!"
-pubDate: 2025-05-19
+pubDate: 2025-05-19T08:44:00-06:00
 author: "David Wesst"
 description: "First devlog for Kiosk-- and you have to start somewhere, right? 😊"
 category: "devlog"
