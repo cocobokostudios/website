@@ -5,6 +5,9 @@ author: "David Wesst"
 description: "My personal journey to finally build the kind of indie game studio I’ve dreamed about for decades."
 category: "musings"
 tags: ["studio-journey", "cocoboko"]
+image: 
+    url: "/blog/2025-05-20_kiosk-development-begins/what-is-cocoboko_header-image.png"
+    alt: "A purple question mark with a black outline where the dot of the question mark is the Cocoboko Studios logo."
 ---
 
 Cocoboko Studios is another independent game studio comprised of one employee, me, the founder. The plan is to make video games that I, and others like me, would like to play that I don't see in the market.

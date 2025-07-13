@@ -5,6 +5,7 @@ author: "David Wesst"
 description: "First devlog for Kiosk-- and you have to start somewhere, right? 😊"
 category: "devlog"
 tags: ["project-kiosk", "development-update"]
+
 ---
 
 Kiosk development has been happening for longer than a week-- but you have to start writing updates at some point. So here is what has happened in a pretty short period.
