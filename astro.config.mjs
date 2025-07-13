@@ -16,5 +16,27 @@ export default defineConfig({
     sitemap(),
     mdx(),
     tailwind()
-  ]
+  ],
+  vite: {
+    plugins: [
+      {
+        name: 'copy-blog-images',
+        apply: 'build',
+        async closeBundle() {
+          const fs = await import('fs/promises');
+          const path = await import('path');
+          const glob = (await import('glob')).glob;
+          const srcDir = path.resolve('src/content/blog');
+          const outDir = path.resolve('dist/blog');
+          const files = await glob('**/*.{png,jpg,jpeg,gif,svg,webp}', { cwd: srcDir });
+          for (const file of files) {
+            const srcFile = path.join(srcDir, file);
+            const destFile = path.join(outDir, file);
+            await fs.mkdir(path.dirname(destFile), { recursive: true });
+            await fs.copyFile(srcFile, destFile);
+          }
+        }
+      }
+    ]
+  }
 });
