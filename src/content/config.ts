@@ -9,7 +9,7 @@ const blogSchema = z.object({
         url: z.string(),
         alt: z.string()
     }).optional(),
-    category: z.enum(['devlog', 'news', 'tutorial']).optional(),
+    category: z.enum(['devlog', 'musings']).optional(),
     tags: z.array(z.string()).optional(),
 });
 
