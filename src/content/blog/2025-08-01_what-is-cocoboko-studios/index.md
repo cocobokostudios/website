@@ -46,11 +46,13 @@ As a kid in Winnipeg in the 1990's, making video games wasn't really a career op
 
 As a university student, I knew there were options and opportunities but it wasn't the right time, or there was always an excuse to wait for the right moment.
 
-Now, I have a full-time job, a family, a mortgage, more responsibility than twenty-something me could have handled. The video game market itself is kind of a mess ([reference][1]) from a career perspective, and there are more games being released than even making small or solo studios like mine near impossible to get noticed.
+Now, I have a full-time job, a family, a mortgage, more responsibility than twenty-something me could have handled. The video game market is flooded, uncertain, and competitive-— and yet, here I am, building something anyway.
 
 But like I said, there is no perfect time to start something. So you might as well just start.
 
-[1]: https://en.wikipedia.org/wiki/2022%E2%80%932025_video_game_industry_layoffs
+There’s never a perfect time. So I’m starting now—and I’m doing it my way.
+
+![Bar chart from SteamDB showing the number of games released on Steam each year from 2006 to 2025. The chart highlights a dramatic rise in releases starting around 2014. In 2006, only 70 games were released, compared to a peak of 18,717 in 2024. The chart also distinguishes between “Games” and “Limited Games” with different shades of blue. The 2025 bar (10,094) is partial and shown with a dashed outline, indicating the year is still in progress.](/src/content/blog/2025-08-01_what-is-cocoboko-studios/steamdb_game_releases_per_year.png "Steam Releases per year by SteamDB.info")
 
 ## What makes Cocoboko different from other indie efforts?
 
@@ -58,10 +60,10 @@ Well, me of course. 😉
 
 But what about me? I'm not special. Like I said, I have a full time day-job and a family, which keeps me exceptionally busy. I am continually trying to balance time for myself, with time for my family, and time for the day-job. 
 
-In all of the podcasts, devlogs, and industry stories I have consumed over the years-- I have yet to find one where someone started their journey in commercial game development, with a family, and without risking everything to "chase their dream" or whatever. It doesn't sound like the ideal environment to start a game studio, I think that is exactly what makes it different from other indie efforts.
+In all of the podcasts, devlogs, and industry stories I have consumed over the years-- I have yet to find one where someone started their journey in commercial game development, with a family, and without risking everything to "chase their dream" or whatever. It’s not the typical way to start a game studio—and that’s exactly why it matters.
 
 These conditions have taught me to appreciate the time that I do get to spend on my passion. This idea of appreciation of what I do have, ideas are part of the foundation of Cocoboko Studios, and it is these ideas that will make Cocoboko Studios unique.
 
 --
 
-Writing all this down helps ground my thoughts and feelings about this journey. I know it's going to be hard, but it's going to be my journey. I hope you come along for the ride.
+Writing all this down helps ground my thoughts and feelings about this journey. It’s not going to be easy—but it’s mine. I’m building it anyway. I hope you’ll come along for the ride.
