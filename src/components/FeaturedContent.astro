@@ -1,40 +1,48 @@
 ---
-import featuredContent from '../data/featured-content.json';
+import { getCollection } from 'astro:content';
+
+const blogPosts = (await getCollection('blog'))
+    .sort((a, b) => new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime())
+    .slice(0, 2);
 ---
 
 <section class="py-16 bg-slate-800 text-white">
     <div class="container mx-auto px-4">
         <h2 class="text-4xl font-bold mb-16 text-center">Featured Content</h2>
         
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-            {featuredContent.map(item => (
-                <a href={item.url} class="group">
+        <div class={`grid ${blogPosts.length === 1 ? 'grid-cols-1 justify-items-center' : 'grid-cols-1 md:grid-cols-2'} gap-8 max-w-6xl mx-auto`}>
+            {blogPosts.map(post => {
+                const image = post.data.image?.url || 'https://placehold.co/600x400';
+                const imageAlt = post.data.image?.alt || post.data.title;
+                const dateObj = new Date(post.data.pubDate);
+                const dateStr = !isNaN(dateObj.getTime())
+                    ? dateObj.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })
+                    : '';
+                return (
+                <a href={post.slug ? `/blog/${post.slug}` : '#'} class="group">
                     <div class="relative bg-gray-900 rounded-lg overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-lg hover:shadow-white/50 hover:bg-gradient-to-b hover:from-gray-900 hover:to-gray-800/40">
                         <div class="absolute inset-0 bg-white/0 group-hover:bg-white/5 rounded-lg transition-all duration-300"></div>
                         <div class="relative aspect-[3/2]">
                             <img 
-                                src={item.imageUrl} 
-                                alt={item.imageAlt} 
+                                src={image} 
+                                alt={imageAlt} 
                                 class="w-full h-full object-cover"
                             />
                         </div>
                         <div class="relative p-6">
-                            <span class={`inline-block bg-${item.typeColor}-600 text-white text-xs font-bold px-2 py-1 rounded mb-4`}>
-                                {item.type}
+                            <span class={`inline-block bg-purple-600 text-white text-xs font-bold px-2 py-1 rounded mb-4`}>
+                                Blog
                             </span>
-                            <h3 class="text-xl font-semibold mb-2">{item.title}</h3>
-                            <p class="text-gray-400">{item.description}</p>
+                            <h3 class="text-xl font-semibold mb-2">{post.data.title}</h3>
+                            <p class="text-gray-400">{post.data.description}</p>
                             <div class="mt-4 text-sm text-gray-500">
-                                {new Date(item.date).toLocaleDateString('en-US', { 
-                                    month: 'long',
-                                    day: 'numeric',
-                                    year: 'numeric'
-                                })} • {item.metadata}
+                                {dateStr}{post.data.metadata ? ` • ${post.data.metadata}` : ''}
                             </div>
                         </div>
                     </div>
                 </a>
-            ))}
+                );
+            })}
         </div>
     </div>
 </section>
