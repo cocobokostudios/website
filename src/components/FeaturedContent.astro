@@ -2,7 +2,7 @@
 import { getCollection } from 'astro:content';
 
 const blogPosts = (await getCollection('blog'))
-    .sort((a, b) => new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime())
+    .sort((a: { data: { pubDate: string | number | Date; }; }, b: { data: { pubDate: string | number | Date; }; }) => new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime())
     .slice(0, 2);
 ---
 
@@ -11,7 +11,7 @@ const blogPosts = (await getCollection('blog'))
         <h2 class="text-4xl font-bold mb-16 text-center">Featured Content</h2>
         
         <div class={`grid ${blogPosts.length === 1 ? 'grid-cols-1 justify-items-center' : 'grid-cols-1 md:grid-cols-2'} gap-8 max-w-6xl mx-auto`}>
-            {blogPosts.map(post => {
+            {blogPosts.map((post: { data: { image: { url: string; alt: any; }; title: unknown; pubDate: string | number | Date; description: unknown; metadata: any; }; slug: any; }) => {
                 const image = post.data.image?.url || 'https://placehold.co/600x400';
                 const imageAlt = post.data.image?.alt || post.data.title;
                 const dateObj = new Date(post.data.pubDate);
