@@ -15,19 +15,19 @@ const hasOddLastRow = itemsInLastRow === 1;
       {games.map((game, index) => (
         <a 
           href={`/games/${game.title.toLowerCase()}`} 
-          class={`block relative bg-gray-900 p-6 rounded-lg shadow-md transition-all duration-300 ease-in-out hover:-translate-y-2 hover:shadow-lg hover:shadow-white/50 hover:bg-gradient-to-b hover:from-gray-900 hover:to-gray-800/40 group w-full ${
+          class={`flex flex-col justify-between h-full block relative bg-gray-900 p-6 rounded-lg shadow-md transition-all duration-300 ease-in-out hover:-translate-y-2 hover:shadow-lg hover:shadow-white/50 hover:bg-gradient-to-b hover:from-gray-900 hover:to-gray-800/40 group w-full ${
             games.length === 1 ? 'md:col-span-2' : 
             (hasOddLastRow && index === games.length - 1) ? 'md:col-span-2' : 
             ''
           }`}
         >
           <div class="absolute inset-0 bg-white/0 group-hover:bg-white/5 rounded-lg transition-all duration-300"></div>
-          <img src={game.imageURL} alt={game.title} class="relative w-full h-48 object-cover rounded-md mb-4" />
-          <span class="relative inline-block bg-red-500 text-white text-xs font-bold px-2 py-1 rounded mb-2">
-            {game.status}
-          </span>
-          <h3 class="relative text-xl font-semibold mb-2">{game.title}</h3>
-          <p class="relative text-gray-400">{game.description}</p>
+          <div>
+            <img src={game.image.url} alt={game.image.alt} class="relative w-full h-48 object-cover rounded-md mb-4" />
+            <h3 class="relative text-xl font-semibold mb-2">{game.title}</h3>
+            <p class="relative text-gray-400">{game.description}</p>
+          </div>
+          <span class="relative inline-block mt-4 px-4 py-2 text-xs font-semibold rounded-full bg-blue-700/80 text-white shadow-sm self-start">{game.phase}</span>
         </a>
       ))}
     </div>

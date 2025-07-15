@@ -10,4 +10,10 @@ if (!kioskData) {
 }
 ---
 
-<GamePage gameData={kioskData} />
+<GamePage gameData={{
+    title: kioskData.title,
+    projectKey: kioskData.projectKey,
+    status: kioskData.phase,
+    description: kioskData.description,
+    imageURL: kioskData.image.url
+}} />
