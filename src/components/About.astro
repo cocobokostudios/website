@@ -1,5 +1,6 @@
 ---
 import socialLinks from '../data/social-links.json';
+import { Icon } from '@iconify/react';
 ---
 
 <section class="bg-gray-900 py-20">
@@ -9,22 +10,20 @@ import socialLinks from '../data/social-links.json';
         <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div class="bg-slate-800 aspect-[3/2] rounded-lg overflow-hidden">
                 <img 
-                    src="https://placehold.co/600x400" 
+                    src="/images/dw_controller-coffee-desk.jpg" 
                     alt="Cocoboko Studios Team" 
-                    class="w-full h-full object-cover"
+                    class="w-full h-full object-cover brightness-110 contrast-105 sepia-[0.05]"
                 />
             </div>
             
             <div class="space-y-8">
-                <div>
-                    <h3 class="text-2xl font-bold text-purple-500 mb-4">Our Mission</h3>
-                    <p class="text-gray-300 leading-relaxed">
-                        At Cocoboko Studios, we believe in creating games that not only entertain but also inspire. Our team of passionate developers, artists, and storytellers work together to craft unique gaming experiences that push boundaries and create lasting memories.
-                    </p>
-                </div>
+                <h3 class="text-2xl font-bold text-purple-500 mb-4">The Goal</h3>
+                <p class="text-gray-300 leading-relaxed">
+                    Cocoboko Studios is a passion-driven attempt to chase dreams and spark that same drive in others.
+                </p>
                 
                 <p class="text-gray-300 leading-relaxed">
-                    Founded in 2023, we're a small but dedicated team with big dreams. We focus on innovative gameplay mechanics, compelling narratives, and visually striking worlds that captivate players from the first moment.
+                    A vision nearly thirty years in the making and officially founded almost a decade ago, Cocoboko Studios finally launched in 2024 with the goal of creating commercial games centered on exploration, storytelling, economics (yes, really) and simulation—genres that have captivated its founder since childhood and deserve a bigger stage. 
                 </p>
                 
                 <div class="flex gap-4">
@@ -32,10 +31,11 @@ import socialLinks from '../data/social-links.json';
                         <a 
                             href={link.url} 
                             title={link.title} 
-                            class="text-white bg-slate-700 hover:bg-slate-600 rounded-full px-4 py-2 text-sm"
+                            class={`text-white ${link.brandColor} hover:opacity-90 rounded-full p-3 text-xl transition-opacity duration-200`}
+                            target="_blank"
                             aria-label={link.description}
                         >
-                            {link.icon}
+                            <Icon client:load icon={link.icon} />
                         </a>
                     ))}
                 </div>

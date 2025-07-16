@@ -1,0 +1,19 @@
+---
+import GamePage from '../../layouts/GamePage.astro';
+import games from '../../data/games.json';
+
+// Get the game by its title, case-insensitive
+const agentData = games.find(game => game.title.toLowerCase() === 'agent');
+
+if (!agentData) {
+    throw new Error('Agent game data not found');
+}
+---
+
+<GamePage gameData={{
+    title: agentData.title,
+    projectKey: agentData.projectKey,
+    status: agentData.phase,
+    description: agentData.description,
+    imageURL: agentData.image.url
+}} />

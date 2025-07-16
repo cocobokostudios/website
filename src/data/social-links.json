@@ -1,32 +1,30 @@
 [
   {
-    "title": "Facebook",
-    "url": "https://facebook.com",
-    "icon": "FB",
-    "description": "Follow us on Facebook"
-  },
-  {
-    "title": "Twitter",
-    "url": "https://twitter.com",
-    "icon": "TW",
-    "description": "Follow us on Twitter"
-  },
-  {
-    "title": "Instagram",
-    "url": "https://instagram.com",
-    "icon": "IG",
-    "description": "Follow us on Instagram"
+    "title": "BlueSky",
+    "url": "https://bsky.app/profile/cocobokostudios.bsky.social",
+    "icon": "ri:bluesky-fill",
+    "brandColor": "bg-[#0085FF]",
+    "description": "Follow us on BlueSky"
   },
   {
     "title": "YouTube",
     "url": "https://www.youtube.com/@cocobokostudios",
-    "icon": "YT",
+    "icon": "mdi:youtube",
+    "brandColor": "bg-[#FF0000]",
     "description": "Subscribe to our YouTube channel"
   },
   {
     "title": "Discord",
-    "url": "https://discord.com",
-    "icon": "DC",
+    "url": "https://discord.gg/2Y8eqU3Cyk",
+    "icon": "mdi:discord",
+    "brandColor": "bg-[#5865F2]",
     "description": "Join our Discord community"
+  },
+  {
+    "title": "LinkedIn",
+    "url": "https://www.linkedin.com/company/cocobokostudios",
+    "icon": "fa6-brands:linkedin",
+    "brandColor": "bg-[#0A66C2]",
+    "description": "Connect with us on LinkedIn"
   }
 ]
