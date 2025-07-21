@@ -1,5 +1,6 @@
 // games
-[{
+[
+  {
     "title": "Kiosk",
     "projectKey": "project-kiosk",
     "phase": "Concept Phase",
@@ -9,4 +10,5 @@
       "alt": "A rough pencil sketching of an airport waiting area with large floor-to-ceiling windows that let in soft natural light. In the foreground, a few travelers sit on colorful chairs next to bright luggage, including a yellow suitcase and a red backpack. The focus is on the airport kiosk in the background, with neatly arranged shelves displaying snacks and travel items in warm, simplified tones. The color palette is gentle and minimal, emphasizing calmness and routine in a travel setting. Derived from a photo by Thuy on Unsplash.",
       "creditURL": "https://unsplash.com/photos/a-store-filled-with-lots-of-people-sitting-at-tables-KiE2CgqSc84?utm_content=creditShareLink&utm_medium=referral&utm_source=unsplash"
     }
-}]
+  }
+]
