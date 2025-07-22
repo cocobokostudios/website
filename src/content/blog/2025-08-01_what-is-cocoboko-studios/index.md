@@ -10,7 +10,7 @@ image:
     alt: "A purple question mark with a black outline where the dot of the question mark is the Cocoboko Studios logo."
 ---
 
-Cocoboko Studios is another independent game studio comprised of one employee, me, the founder. The plan is to make video games that I, and others like me, would like to play that I don't see in the market.
+Cocoboko Studios is an independent game studio. The plan is to make video games that I, and others like me, would like to play that I don't see in the market.
 
 But it's more than a business idea. As cliché as it sounds, Cocoboko Studios is dream that I have been hesitating on for the past 20 years, and I'm finally trying to give it form, regardless of the odds.
 
@@ -36,7 +36,7 @@ In short, I want to make games that blend narrative with simulation and manageme
 
 Because there is no perfect time to start something.
 
-Ever since I accidentally signed up for a computer science class in university and discovered programming, I’ve been talking (but not acting) on the idea of making video games. 
+Ever since I accidentally signed up for a computer science class in university and discovered programming, I’ve been talking about (but not acting on) the idea of making video games. 
 
 Even before that, as a kid, I created fake instruction manuals for games I wanted to see, and game design documents (although I didn't know that's what they would be called at the time) for an RPG.
 
@@ -48,9 +48,7 @@ As a university student, I knew there were options and opportunities but it wasn
 
 Now, I have a full-time job, a family, a mortgage, more responsibility than twenty-something me could have handled. The video game market is flooded, uncertain, and competitive-— and yet, here I am, building something anyway.
 
-But like I said, there is no perfect time to start something. So you might as well just start.
-
-There’s never a perfect time. So I’m starting now—and I’m doing it my way.
+But like I said, there is no perfect time to start something. So you might as well just start. So I’m starting now—and I’m doing it my way.
 
 ![Bar chart from SteamDB showing the number of games released on Steam each year from 2006 to 2025. The chart highlights a dramatic rise in releases starting around 2014. In 2006, only 70 games were released, compared to a peak of 18,717 in 2024. The chart also distinguishes between “Games” and “Limited Games” with different shades of blue. The 2025 bar (10,094) is partial and shown with a dashed outline, indicating the year is still in progress.](steamdb_game_releases_per_year.png "Steam Releases per year by SteamDB.info")
 
@@ -58,7 +56,9 @@ There’s never a perfect time. So I’m starting now—and I’m doing it my wa
 
 Well, me of course. 😉
 
-But what about me? I'm not special. Like I said, I have a full time day-job and a family, which keeps me exceptionally busy. I am continually trying to balance time for myself, with time for my family, and time for the day-job. 
+But what about me? I'm not special. Like I said, I have a full time day-job and a family, which keeps me exceptionally busy. I am continually trying to balance time for myself, with time for my family, and time for the day-job.
+
+But maybe, in a way, _that_ is what make me special in this space.
 
 In all of the podcasts, devlogs, and industry stories I have consumed over the years-- I have yet to find one where someone started their journey in commercial game development, with a family, and without risking everything to "chase their dream" or whatever. It’s not the typical way to start a game studio—and that’s exactly why it matters.
 
