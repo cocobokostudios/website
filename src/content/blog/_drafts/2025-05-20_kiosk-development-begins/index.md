@@ -6,7 +6,7 @@ description: "First devlog for Kiosk-- and you have to start somewhere, right? ð
 category: "devlog"
 tags: ["project-kiosk", "development-update"]
 image:
-    url: src/content/blog/2025-05-20_kiosk-development-begins/kiosk-devlog-thumbnail.webp
+    url: /blog/2025-05-20_kiosk-development-begins/kiosk-devlog-thumbnail.webp
     alt: Pencil sketch placeholder art that is grey on white with a yellow accent colour is out of focus in the background with the word Devlog displayed in bold white monospaced letters with a thin black outline around each letter.
 ---
 

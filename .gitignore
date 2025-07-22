@@ -1,6 +1,9 @@
 # build output
 dist/
 
+# development output
+public/blog/
+
 # generated types
 .astro/
 
