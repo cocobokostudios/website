@@ -2,7 +2,7 @@
 dist/
 
 # development output
-public/blog/
+public/images/blog/
 
 # generated types
 .astro/
