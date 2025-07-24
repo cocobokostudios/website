@@ -16,6 +16,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          lfs: true
+          
       
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -39,7 +42,7 @@ jobs:
   
   deploy:
     needs: build
-    if: github.ref == 'refs/heads/ft/main' && github.event_name == 'push'
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
     runs-on: ubuntu-latest
     permissions:
       pages: write

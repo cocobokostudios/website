@@ -1,0 +1,6 @@
+---
+const script = `<script data-collect-dnt="true" async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>`;
+const noscript = `<noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif?collect-dnt=true" alt="" referrerpolicy="no-referrer-when-downgrade"/></noscript>`;
+---
+
+<Fragment set:html={`${script}${noscript}`} />

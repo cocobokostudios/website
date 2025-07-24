@@ -1,0 +1,4 @@
+# Exclude specific files or folders
+src/content/blog/_drafts
+src/pages/games/kiosk.astro
+src/data/_drafts.json

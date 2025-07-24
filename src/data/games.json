@@ -9,16 +9,5 @@
       "alt": "A pencil sketch of a busy airport terminal features a prominent yellow overhead sign reading “Agent” in bold black letters. The sign shows a stylized figure holding a ticket in front of a kiosk. In the background, soft blue and grey tones illustrate the sweeping glass architecture and a crowd of travelers in motion, with one person in the foreground pulling a suitcase. The vibrant sign stands out against the calm, flowing atmosphere of the terminal. Derived from a photo by Larissa Gies on Unsplash.",
       "creditURL": "https://unsplash.com/photos/yellow-and-black-no-smoking-sign-MQWc4I9VuTc?utm_content=creditShareLink&utm_medium=referral&utm_source=unsplash"
     }
-  },
-  {
-    "title": "Kiosk",
-    "projectKey": "project-kiosk",
-    "phase": "Concept Phase",
-    "description": "Kiosk is a cozy management game where you run the first human-operated airport kiosk, bucking trends both economically and technologically, all with a focus on creating a welcoming environment and connecting with travellers from all over the world.",
-    "image": {
-      "url":"/images/kiosk-placeholder-pencil-art_thuy-KiE2CgqSc84-unsplash.png",
-      "alt": "A rough pencil sketching of an airport waiting area with large floor-to-ceiling windows that let in soft natural light. In the foreground, a few travelers sit on colorful chairs next to bright luggage, including a yellow suitcase and a red backpack. The focus is on the airport kiosk in the background, with neatly arranged shelves displaying snacks and travel items in warm, simplified tones. The color palette is gentle and minimal, emphasizing calmness and routine in a travel setting. Derived from a photo by Thuy on Unsplash.",
-      "creditURL": "https://unsplash.com/photos/a-store-filled-with-lots-of-people-sitting-at-tables-KiE2CgqSc84?utm_content=creditShareLink&utm_medium=referral&utm_source=unsplash"
-    }
   }
 ]
