@@ -6,7 +6,7 @@ description: "My personal journey to finally build the kind of indie game studio
 category: "musings"
 tags: ["studio-journey", "cocoboko"]
 image: 
-    url: "/images/blog/2025-08-01_what-is-cocoboko-studios/what-is-cocoboko_header-image.webp"
+    url: "/images/blog/2025-07-24_what-is-cocoboko-studios/what-is-cocoboko_header-image.webp"
     alt: "A purple question mark with a black outline where the dot of the question mark is the Cocoboko Studios logo."
 ---
 
