@@ -1,6 +1,6 @@
 ---
 title: "What is Cocoboko Studios?"
-pubDate: 2025-08-01T08:44:00-06:00
+pubDate: 2025-07-24T12:00:00-06:00
 author: "David Wesst"
 description: "My personal journey to finally build the kind of indie game studio I’ve dreamed about for decades."
 category: "musings"
