@@ -1,7 +1,9 @@
 {
-  "name": "astro-site",
+  "name": "cocoboko-website",
   "type": "module",
-  "version": "0.0.1",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Cocoboko Studios website, built with Astro",
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
