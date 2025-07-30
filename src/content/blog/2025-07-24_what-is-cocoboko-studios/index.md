@@ -8,6 +8,8 @@ tags: ["studio-journey", "cocoboko"]
 image: 
     url: "/images/blog/2025-07-24_what-is-cocoboko-studios/what-is-cocoboko_header-image.webp"
     alt: "A purple question mark with a black outline where the dot of the question mark is the Cocoboko Studios logo."
+comments:
+    discord: https://discord.com/channels/488931914863083561/1398069128232698016
 ---
 
 Cocoboko Studios is an independent game studio. The plan is to make video games that I, and others like me, would like to play that I don't see in the market.

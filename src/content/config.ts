@@ -11,6 +11,9 @@ const blogSchema = z.object({
     }).optional(),
     category: z.enum(['devlog', 'musings']).optional(),
     tags: z.array(z.string()).optional(),
+    comments: z.object({
+        discord: z.string().url()
+    }).optional(),
 });
 
 export type BlogPost = z.infer<typeof blogSchema>;
