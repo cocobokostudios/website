@@ -5,6 +5,7 @@ interface Props {
 
 const { url } = Astro.props;
 const defaultUrl = 'https://discord.com/channels/488931914863083561/1398069128232698016';
+const inviteUrl = 'https://discord.gg/Q3jpyga6Ap'; // Cocoboko Cafe invite link
 ---
 
 <section class="mt-12 mx-auto max-w-xl rounded-xl bg-gradient-to-br from-purple-900 via-purple-800 to-purple-700 border-2 border-purple-400 shadow-lg p-8 text-center">
@@ -21,4 +22,9 @@ const defaultUrl = 'https://discord.com/channels/488931914863083561/139806912823
             </a>
         </p>
     )}
+    <div class="mt-6">
+        <a href={inviteUrl} target="_blank" rel="noopener noreferrer" class="text-base font-medium text-purple-300 underline underline-offset-4 hover:text-purple-100 transition-colors">
+            First time here? Click here to join the community!
+        </a>
+    </div>
 </section>
