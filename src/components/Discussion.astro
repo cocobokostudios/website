@@ -1,0 +1,24 @@
+---
+interface Props {
+    url?: string;
+}
+
+const { url } = Astro.props;
+const defaultUrl = 'https://discord.com/channels/488931914863083561/1398069128232698016';
+---
+
+<section class="mt-12 mx-auto max-w-xl rounded-xl bg-gradient-to-br from-purple-900 via-purple-800 to-purple-700 border-2 border-purple-400 shadow-lg p-8 text-center">
+    {url ? (
+        <p class="text-lg text-white">
+            <a href={url} target="_blank" rel="noopener noreferrer" class="font-semibold underline underline-offset-4 text-purple-200 hover:text-purple-100 transition-colors">
+                Continue the conversation on the Discord thread and let us know your thoughts!
+            </a>
+        </p>
+    ) : (
+        <p class="text-lg text-white">
+            <a href={defaultUrl} target="_blank" rel="noopener noreferrer" class="font-semibold underline underline-offset-4 text-purple-200 hover:text-purple-100 transition-colors">
+                Continue the conversation on this post and others at the Cocoboko Cafe!
+            </a>
+        </p>
+    )}
+</section>

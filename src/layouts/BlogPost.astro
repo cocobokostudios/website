@@ -3,6 +3,7 @@ import Layout from './Layout.astro';
 import Navigation from '../components/Navigation.astro';
 import Footer from '../components/Footer.astro';
 import Newsletter from '../components/Newsletter.astro';
+import Discussion from '../components/Discussion.astro';
 
 interface Props {
     title: string;
@@ -13,9 +14,12 @@ interface Props {
         alt: string;
     };
     description: string;
+    comments?: {
+        discord?: string;
+    };
 }
 
-const { title, pubDate, author, image, description } = Astro.props;
+const { title, pubDate, author, image, description, comments } = Astro.props;
 const base = import.meta.env.BASE_URL;
 ---
 
@@ -45,6 +49,8 @@ const base = import.meta.env.BASE_URL;
             <div class="prose prose-lg max-w-none prose-invert prose-p:text-gray-300 prose-headings:text-white prose-a:text-purple-400 hover:prose-a:text-purple-300">
                 <slot />
             </div>
+            <hr class="my-12 border-t-2 opacity-70" />
+            <Discussion url={comments?.discord} />
         </article>
     </main>
     <Footer />

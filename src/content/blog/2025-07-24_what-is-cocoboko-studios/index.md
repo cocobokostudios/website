@@ -8,6 +8,8 @@ tags: ["studio-journey", "cocoboko"]
 image: 
     url: "/images/blog/2025-07-24_what-is-cocoboko-studios/what-is-cocoboko_header-image.webp"
     alt: "A purple question mark with a black outline where the dot of the question mark is the Cocoboko Studios logo."
+comments:
+    discord: https://discord.com/channels/488931914863083561/1398069128232698016
 ---
 
 Cocoboko Studios is an independent game studio. The plan is to make video games that I, and others like me, would like to play that I don't see in the market.
@@ -63,7 +65,5 @@ But maybe, in a way, _that_ is what make me special in this space.
 In all of the podcasts, devlogs, and industry stories I have consumed over the years-- I have yet to find one where someone started their journey in commercial game development, with a family, and without risking everything to "chase their dream" or whatever. It’s not the typical way to start a game studio—and that’s exactly why it matters.
 
 These conditions have taught me to appreciate the time that I do get to spend on my passion. This idea of appreciation of what I do have, ideas are part of the foundation of Cocoboko Studios, and it is these ideas that will make Cocoboko Studios unique.
-
---
 
 Writing all this down helps ground my thoughts and feelings about this journey. It’s not going to be easy—but it’s mine. I’m building it anyway. I hope you’ll come along for the ride.
