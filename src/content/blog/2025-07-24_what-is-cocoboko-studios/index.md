@@ -66,6 +66,4 @@ In all of the podcasts, devlogs, and industry stories I have consumed over the y
 
 These conditions have taught me to appreciate the time that I do get to spend on my passion. This idea of appreciation of what I do have, ideas are part of the foundation of Cocoboko Studios, and it is these ideas that will make Cocoboko Studios unique.
 
---
-
 Writing all this down helps ground my thoughts and feelings about this journey. It’s not going to be easy—but it’s mine. I’m building it anyway. I hope you’ll come along for the ride.
