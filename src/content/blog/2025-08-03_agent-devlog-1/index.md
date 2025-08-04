@@ -1,6 +1,6 @@
 ---
 title: "Agent Devlog 1 - One Down! Many More To Go!"
-pubDate: 2025-08-03T20:00:00-06:00
+pubDate: 2025-08-04T01:09:00-06:00
 author: "David Wesst"
 description: "Wrap up of the first iteration on Agent"
 category: "devlog"
