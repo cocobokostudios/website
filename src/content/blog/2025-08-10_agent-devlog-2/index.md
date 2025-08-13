@@ -28,31 +28,58 @@ You'll notice the red indicator for the backlog column highlighting that I have 
 
 ## What got done?
 
+Nowhere near as much I originally had planned, but a few things on the marketing side of the house. More specifically:
+- The first devlog post for the project
+- Setup Bing Webmaster Tools and Google Search Console on the website
+
+I did these things while getting this blog post started with a plan. Once that passed, progress stopped.
+
 ## What didn't get done?
 
-Two things:
+A lot. 😅
 
-- A blog post, which is a marketing thing
-- A character script, which is a game content thing
+![Placeholder for the kanban screenshot](https://placeholder.co/600x300)
 
-The blog post isn't the end of the world. I'm working through learning how to develop in the open while keeping my eye on the development of the game itself.
+### Some Administration 
 
-The character script is pretty important though. I still need to write down the ideas, which have been ruminating throughout the week, but I think it isn't too much to add to the next iteration.
+I managed to get some of the administrative work done and sent off to the lawyers to incorporate, but didn't finish some of the longer tasks that need to be handled so although it is in review, it isn't finished just yet.
 
-![White text on a black kanban board from GitHub with all the issues for iteration 2, including two that didn't get finished](iteration_1_carryover.png)
+### Video Game Development Tasks
+
+Nothing on the video game itself was worked on. I had originally thought I would push through the week, knowing that I had a conference coming up mid-week. 
+
+Unfortunately, that didn't really work as the day job needed extra attention and (if I am being very honest) I was feeling some burnout from everything going on the past many weeks.
+
+### Marketing on other Channels
+
+Although not the end highest of priorities, I did want to get things moving on other marketing channels and start stretching those muscles. 
+
+That didn't happen.
 
 ## What was discovered?
 
-What I discovered, and ultimately what I learned, is that there will not be a "perfect plan". 
+Two things: Real Life Changes Plans, and Task Carryover Isn't Always a Solution.
 
-I know this from years of software development and enterprise implementation project from my day-job. Plus, this is my first stab at a real commercial game, and I don't really know what I'm doing. 
+### Real Life Changes Plans
 
-What _I do know_, however, are my constraints. Specifically time and lack of ability with things like art and music. Still, the plan I have is enough to keep focus and it has also been enough to remind me that as I go, I will discover things that I _want_ to implement, but do not _need_ to implement at this point in the project.
+Sometimes things don't work out as you originally intended.
+
+When you have a day-job, a family, and are trying to start a new business, it might not be possible just to "push through it". Sometimes your well-made plan you made a couple of weeks ago when you were full of energy and excitement doesn't go like you wanted.
+
+And all of that is okay...as long as it doesn't keep happening. If it does, you need to adjust your expectations and possibly your timelines.
+
+### Take Carryover Isn't Always a Solution
+
+While writing this post, I reviewed the kanban image at the top of the post. The backlog had 6 tasks in it, which I noted in the post when I started it. That was clearly too many, especially considering what ended up happening.
+
+The lesson here is that tasks can't always just "spill over" into the next iteration. You need to adjust the plan, re-assess expectations, and understand the priority of the tasks.
 
 ## What is the plan for the next iteration?
 
-The next one is going to be a little more development focused, with a pinch more marketing.
+I actually planned to take a break for the next iteration, knowing that I would be gone for most of it because of the conference I'm attending as part of the day job.
 
-There are administrative tasks that are going to pop up that I'm going to need to deal with, beyond just this game, but they are just as important—if not more so—than the rest of the tasks and features in front of me.
+There are a few extra days in there before the real next iteration kicks off, so I might try and tie up a few tasks before then. 
 
-See you next week.
+That being said, I am realizing that opening the business itself to get ready to put a product out on Steam, is time consuming. Even though it is not part of making the game itself, it is on the critical path to getting the game out there, so it needs to take my attenion.
+
+End scene. 🎬
