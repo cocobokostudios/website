@@ -12,7 +12,7 @@ comments:
     discord: https://discord.com/channels/488931914863083561/1406305497174507653
 ---
 
-Short intro
+Let's get right into it, shall we? 😊
 
 ## Goal: Administration and Gameplay
 
