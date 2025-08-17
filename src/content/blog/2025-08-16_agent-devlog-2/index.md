@@ -5,8 +5,8 @@ author: "David Wesst"
 description: "A recap of iteration 2 for Agent, highlighting small wins in marketing and administration, challenges with burnout and prioritization, and lessons learned about real life plans and task carryover."
 category: "devlog"
 tags: ["project-agent"]
-image: 
-    url: "/images/blog/2025-08-16_agent-devlog-2/agent-devlog-header-devlog2.webp"
+image:
+    url: "/images/blog/2025-08-16_agent-devlog-2/iteration_2_where-it-started.png"
     alt: "Stylized image of a yellow airport-style sign reading ‘Agent’ with an icon of a person holding a phone beside a kiosk. The background shows a faded terminal with a lone figure walking beneath arched ceilings. Text at the bottom reads ‘Devlog #2’."
 comments:
     discord: https://discord.com/channels/488931914863083561/1406305497174507653

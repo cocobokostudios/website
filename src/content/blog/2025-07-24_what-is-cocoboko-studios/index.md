@@ -5,8 +5,8 @@ author: "David Wesst"
 description: "My personal journey to finally build the kind of indie game studio I’ve dreamed about for decades."
 category: "musings"
 tags: ["studio-journey", "cocoboko"]
-image: 
-    url: "/images/blog/2025-07-24_what-is-cocoboko-studios/what-is-cocoboko_header-image.webp"
+image:
+    url: "/images/blog/2025-07-24_what-is-cocoboko-studios/steamdb_game_releases_per_year.png"
     alt: "A purple question mark with a black outline where the dot of the question mark is the Cocoboko Studios logo."
 comments:
     discord: https://discord.com/channels/488931914863083561/1398069128232698016
@@ -52,7 +52,6 @@ Now, I have a full-time job, a family, a mortgage, more responsibility than twen
 
 But like I said, there is no perfect time to start something. So you might as well just start. So I’m starting now—and I’m doing it my way.
 
-![Bar chart from SteamDB showing the number of games released on Steam each year from 2006 to 2025. The chart highlights a dramatic rise in releases starting around 2014. In 2006, only 70 games were released, compared to a peak of 18,717 in 2024. The chart also distinguishes between “Games” and “Limited Games” with different shades of blue. The 2025 bar (10,094) is partial and shown with a dashed outline, indicating the year is still in progress.](steamdb_game_releases_per_year.png "Steam Releases per year by SteamDB.info")
 
 ## What makes Cocoboko different from other indie efforts?
 

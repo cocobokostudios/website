@@ -20,6 +20,10 @@ npm install -g @azure/static-web-apps-cli
 echo "Installing project dependencies..."
 npm install
 
+# Install Playwright browsers and dependencies
+echo "Installing Playwright..."
+npx playwright install --with-deps
+
 # Build the project
 echo "Building the project..."
 npm run build
