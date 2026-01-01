@@ -1,10 +1,8 @@
 ---
 const links = [
-    //{ href: `/`, label: "Home" },
+    { href: `/#get-notified`, label: "Get Notified" },
     { href: `/#about`, label: "About" },
     { href: `/#games`, label: "Games" },
-    { href: `/#get-notified`, label: "Get Notified" },
-    //{ href: `/blog`, label: "Blog" },
 ];
 ---
 
@@ -27,7 +25,12 @@ const links = [
             </div>
             
             <!-- Mobile menu button -->
-            <button class="md:hidden text-gray-300 hover:text-white">
+            <button 
+                class="md:hidden text-gray-300 hover:text-white"
+                aria-expanded="false"
+                aria-controls="mobile-menu"
+                data-menu-toggle
+            >
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                 </svg>
@@ -36,7 +39,7 @@ const links = [
     </div>
     
     <!-- Mobile menu -->
-    <div class="hidden md:hidden">
+    <div id="mobile-menu" class="hidden md:hidden">
         <div class="px-2 pt-2 pb-3 space-y-1">
             {links.map(link => (
                 <a
@@ -49,3 +52,15 @@ const links = [
         </div>
     </div>
 </nav>
+
+<script>
+    const menuButton = document.querySelector('[data-menu-toggle]');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    if (menuButton && mobileMenu) {
+        menuButton.addEventListener('click', () => {
+            const isHidden = mobileMenu.classList.toggle('hidden');
+            menuButton.setAttribute('aria-expanded', (!isHidden).toString());
+        });
+    }
+</script>

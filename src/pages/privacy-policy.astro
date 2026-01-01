@@ -13,18 +13,28 @@ import Footer from '../components/Footer.astro';
             
             <div class="prose prose-lg prose-invert max-w-none">
                 <p class="text-gray-300 mb-6">
-                    Last updated: July 24, 2025
+                    Last updated: December 31, 2025
                 </p>
 
+                <nav class="mb-10" aria-label="On this page">
+                    <div class="border border-slate-600 rounded-lg p-4 bg-slate-900/40">
+                        <p class="text-gray-300 font-semibold mb-2">On this page</p>
+                        <ul class="list-disc pl-6 text-gray-300">
+                            <li><a href="#website-analytics" class="underline hover:no-underline">Website analytics (Simple Analytics)</a></li>
+                            <li><a href="#email-updates" class="underline hover:no-underline">Email updates (MailerLite)</a></li>
+                        </ul>
+                    </div>
+                </nav>
+
                 <section class="mb-8">
-                    <h2 class="text-2xl font-semibold mb-4">Welcome! 👋</h2>
+                    <h2 id="website-analytics" class="text-2xl font-semibold mb-4">Website analytics</h2>
                     <p class="text-gray-300">
                         Cocoboko Studios values your privacy. This website uses <strong>Simple Analytics</strong> to collect anonymous, privacy-first usage data. No personal information is collected, and no cookies or tracking fingerprints are used.
                     </p>
                 </section>
 
                 <section class="mb-8">
-                    <h2 class="text-2xl font-semibold mb-4">Information Collection</h2>
+                    <h3 class="text-xl font-semibold mb-4">Information Collection</h3>
                     <p class="text-gray-300 mb-4">
                         Simple Analytics collects basic anonymous usage data to help improve the browsing experience. This includes:
                     </p>
@@ -41,7 +51,7 @@ import Footer from '../components/Footer.astro';
                 </section>
 
                 <section class="mb-8">
-                    <h2 class="text-2xl font-semibold mb-4">Data Usage</h2>
+                    <h3 class="text-xl font-semibold mb-4">Data Usage</h3>
                     <p class="text-gray-300 mb-4">
                         This information is used to:
                     </p>
@@ -54,9 +64,38 @@ import Footer from '../components/Footer.astro';
                 </section>
 
                 <section class="mb-8">
-                    <h2 class="text-2xl font-semibold mb-4">Privacy Choices</h2>
+                    <h3 class="text-xl font-semibold mb-4">Privacy Choices</h3>
                     <p class="text-gray-300">
                         This website respects the “Do Not Track” (DNT) setting in your browser. If DNT is enabled, Simple Analytics still counts your visit, but does not store any identifiable metrics beyond that. You can also use browser settings or extensions to further restrict tracking.
+                    </p>
+                </section>
+
+                <section id="email-updates" class="mb-8">
+                    <h2 class="text-2xl font-semibold mb-4">Email updates (MailerLite)</h2>
+                    <p class="text-gray-300 mb-4">
+                        If you choose to sign up for email updates, we use <strong>MailerLite</strong> to collect and manage your email address and to send occasional emails when there is something worth sharing (for example: a game announcement, demo, or release).
+                    </p>
+
+                    <h3 class="text-xl font-semibold mb-3">What we collect</h3>
+                    <ul class="list-disc pl-6 text-gray-300 mb-4">
+                        <li>Your email address</li>
+                        <li>Subscription metadata (such as the date/time you signed up and confirmation status)</li>
+                    </ul>
+
+                    <h3 class="text-xl font-semibold mb-3">How we use it</h3>
+                    <ul class="list-disc pl-6 text-gray-300 mb-4">
+                        <li>To send occasional updates you have opted in to receive</li>
+                        <li>To maintain the mailing list (for example: preventing duplicates and honoring unsubscribe requests)</li>
+                    </ul>
+
+                    <h3 class="text-xl font-semibold mb-3">Your choices</h3>
+                    <ul class="list-disc pl-6 text-gray-300 mb-4">
+                        <li>You can unsubscribe at any time using the link in any email</li>
+                        <li>If you want your email removed entirely, you can contact us and we will delete it from our list</li>
+                    </ul>
+
+                    <p class="text-gray-300">
+                        MailerLite may process this information on our behalf to provide the email service. We do not sell your email address.
                     </p>
                 </section>
             </div>
