@@ -4,7 +4,7 @@ import Hero from '../components/Hero.astro';
 import About from '../components/About.astro';
 import FeaturedContent from '../components/FeaturedContent.astro';
 import Games from '../components/Games.astro';
-import Newsletter from '../components/Newsletter.astro';
+import GetNotified from '../components/GetNotified.astro';
 import Footer from '../components/Footer.astro';
 import Layout from '../layouts/Layout.astro';
 ---
@@ -12,9 +12,13 @@ import Layout from '../layouts/Layout.astro';
 <Layout>
     <Navigation />
     <Hero />
+    <section id="get-notified" class="bg-slate-800 min-h-[60vh] px-4 sm:px-6 lg:px-8 flex items-center justify-center py-16">
+        <div class="max-w-7xl w-full flex justify-center">
+            <GetNotified />
+        </div>
+    </section>
     <About />
     <!-- <FeaturedContent /> -->
     <Games />
-    <!-- <Newsletter /> -->
     <Footer />
 </Layout>
