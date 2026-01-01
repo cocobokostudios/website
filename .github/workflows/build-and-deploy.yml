@@ -1,15 +1,22 @@
 name: Build and Deploy
 
 on:
+  # Build on every branch push; deploy is gated below
   push:
     branches:
       - '**'
+  # Validate pull requests to protected branches
   pull_request:
-    types: [opened, synchronize, reopened, closed]
+    types: [opened, synchronize, reopened]
     branches:
       - main
       - ft/*
       - hf/*
+
+# Prevent duplicate runs when both push and PR events fire for the same head branch
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.head.ref || github.ref }}
+  cancel-in-progress: true
 
 jobs:
   build:
