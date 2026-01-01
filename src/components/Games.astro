@@ -10,25 +10,23 @@ const hasOddLastRow = itemsInLastRow === 1;
 
 <section id="games" class="py-16 bg-slate-800 text-white">
   <div class="container mx-auto px-4">
-    <h2 class="text-4xl font-bold mb-8 text-center">Our Games</h2>
+    <h2 class="text-4xl font-bold mb-8 text-center">Games</h2>
     <div class={`grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto`}>
       {games.map((game, index) => (
-        <a 
-          href={`/games/${game.title.toLowerCase()}`} 
-          class={`flex flex-col justify-between h-full block relative bg-gray-900 p-6 rounded-lg shadow-md transition-all duration-300 ease-in-out hover:-translate-y-2 hover:shadow-lg hover:shadow-white/50 hover:bg-gradient-to-b hover:from-gray-900 hover:to-gray-800/40 group w-full ${
+        <div
+          class={`flex flex-col justify-between h-full block bg-gray-900 p-6 rounded-lg shadow-md w-full ${
             games.length === 1 ? 'md:col-span-2' : 
             (hasOddLastRow && index === games.length - 1) ? 'md:col-span-2' : 
             ''
           }`}
         >
-          <div class="absolute inset-0 bg-white/0 group-hover:bg-white/5 rounded-lg transition-all duration-300"></div>
           <div>
             <img src={game.image.url} alt={game.image.alt} class="relative w-full h-48 object-cover rounded-md mb-4" />
             <h3 class="relative text-xl font-semibold mb-2">{game.title}</h3>
             <p class="relative text-gray-400">{game.description}</p>
           </div>
           <span class="relative inline-block mt-4 px-4 py-2 text-xs font-semibold rounded-full bg-blue-700/80 text-white shadow-sm self-start">{game.phase}</span>
-        </a>
+        </div>
       ))}
     </div>
   </div>
