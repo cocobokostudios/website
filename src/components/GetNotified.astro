@@ -1,5 +1,76 @@
 ---
 ---
 <div class="w-full max-w-xl flex justify-center">
-    <div class="ml-embedded w-full" data-form="b5oxmp"></div>
+  <div class="w-full space-y-4" data-mailerlite-root>
+    <div class="ml-embedded w-full" data-form="b5oxmp" data-mailerlite-embed></div>
+
+    <div
+      class="rounded-lg border border-slate-600 bg-slate-900/70 p-6 text-slate-100"
+      data-mailerlite-fallback
+      aria-live="polite"
+      hidden
+    >
+      <h3 class="text-lg font-semibold">Get notified about releases</h3>
+      <p class="mt-2 text-sm text-slate-300">
+        Newsletter is coming soon! Come back soon for updates, or follow us on
+        <a
+          href="https://bsky.app/profile/cocobokostudios.bsky.social"
+          target="_blank"
+          rel="noreferrer"
+          class="underline underline-offset-2 transition hover:text-white"
+        >
+          BlueSky
+        </a>
+        or
+        <a
+          href="https://www.youtube.com/@cocobokostudios"
+          target="_blank"
+          rel="noreferrer"
+          class="underline underline-offset-2 transition hover:text-white"
+        >
+          YouTube
+        </a>
+      </p>
+    </div>
+  </div>
 </div>
+
+<script is:inline>
+  (() => {
+    const root = document.querySelector('[data-mailerlite-root]');
+    if (!root) return;
+
+    const embed = root.querySelector('[data-mailerlite-embed]');
+    const fallback = root.querySelector('[data-mailerlite-fallback]');
+
+    if (!embed || !fallback) return;
+
+    const showFallback = () => {
+      fallback.hidden = false;
+    };
+
+    const hideFallback = () => {
+      fallback.hidden = true;
+    };
+
+    const observeEmbedState = () => {
+      const observer = new MutationObserver(() => {
+        if (embed.childElementCount > 0) {
+          hideFallback();
+          observer.disconnect();
+        }
+      });
+
+      observer.observe(embed, { childList: true, subtree: true });
+
+      setTimeout(() => {
+        if (embed.childElementCount === 0) {
+          showFallback();
+        }
+      }, 3000);
+    };
+
+    window.addEventListener('mailerlite:ready', observeEmbedState, { once: true });
+    window.addEventListener('mailerlite:unavailable', showFallback, { once: true });
+  })();
+</script>
