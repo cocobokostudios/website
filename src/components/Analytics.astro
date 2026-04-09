@@ -1,6 +1,21 @@
----
-const script = `<script data-collect-dnt="true" async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>`;
-const noscript = `<noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif?collect-dnt=true" alt="" referrerpolicy="no-referrer-when-downgrade"/></noscript>`;
----
+<script is:inline>
+  (() => {
+    const ANALYTICS_URL = 'https://scripts.simpleanalyticscdn.com/latest.js';
 
-<Fragment set:html={`${script}${noscript}`} />
+    const loadAnalytics = async () => {
+      try {
+        await fetch(ANALYTICS_URL, { mode: 'no-cors', method: 'GET', cache: 'no-store' });
+      } catch {
+        return;
+      }
+
+      const script = document.createElement('script');
+      script.async = true;
+      script.dataset.collectDnt = 'true';
+      script.src = ANALYTICS_URL;
+      document.head.append(script);
+    };
+
+    void loadAnalytics();
+  })();
+</script>
