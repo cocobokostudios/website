@@ -5,7 +5,7 @@
       "appLocation": ".",
       "outputLocation": "dist",
       "appBuildCommand": "npm run build",
-      "run": "npm run dev",
+      "run": "npm run preview",
       "appDevserverUrl": "http://localhost:4321"
     }
   }

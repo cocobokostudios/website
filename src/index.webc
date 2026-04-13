@@ -1,0 +1,14 @@
+---
+layout: layouts/base.webc
+title: Cocoboko Studios - An Independent Game Studio in Development
+---
+<site-navigation></site-navigation>
+<site-hero></site-hero>
+<section id="get-notified" class="bg-slate-800 min-h-[60vh] px-4 sm:px-6 lg:px-8 flex items-center justify-center py-16">
+  <div class="max-w-7xl w-full flex justify-center">
+    <site-get-notified></site-get-notified>
+  </div>
+</section>
+<site-about></site-about>
+<site-games></site-games>
+<site-footer></site-footer>

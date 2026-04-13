@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/webp" href="/favicon.webp">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta
+      name="description"
+      content="Cocoboko Studios is an indie game development team passionate about creating immersive, innovative, and fun experiences for gamers worldwide."
+    >
+    <link rel="preconnect" href="https://fonts.googleapis.com" webc:keep>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin webc:keep>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+      webc:keep
+    >
+    <link rel="stylesheet" href="/assets/site.css" webc:keep>
+    <title @text="title || 'Cocoboko Studios - An Independent Game Studio in Development'">
+      Cocoboko Studios - An Independent Game Studio in Development
+    </title>
+    <mailer-lite-header></mailer-lite-header>
+  </head>
+  <body class="font-['Inter',sans-serif]">
+    <slot></slot>
+    <site-analytics></site-analytics>
+  </body>
+</html>
+
+<style webc:keep>
+  html,
+  body {
+    margin: 0;
+    width: 100%;
+    min-height: 100%;
+  }
+</style>

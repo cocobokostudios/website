@@ -1,0 +1,21 @@
+<script webc:root="override" webc:keep>
+  (() => {
+    const ANALYTICS_URL = 'https://scripts.simpleanalyticscdn.com/latest.js';
+
+    const loadAnalytics = async () => {
+      try {
+        await fetch(ANALYTICS_URL, { mode: 'no-cors', method: 'GET', cache: 'no-store' });
+      } catch {
+        return;
+      }
+
+      const script = document.createElement('script');
+      script.async = true;
+      script.dataset.collectDnt = 'true';
+      script.src = ANALYTICS_URL;
+      document.head.append(script);
+    };
+
+    void loadAnalytics();
+  })();
+</script>

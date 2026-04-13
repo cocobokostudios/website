@@ -1,5 +1,5 @@
 This is a statically generated, open source website for Cocoboko Studios.
 
-We use Astro as the framework, with React and TailwindCSS integrations installed. Astro components and layouts should be named with PascalCase, while Astro pages and other items should be named using kebab case (e.g. index.astro, social-links.json). When custom code or script is needed, TypeScript should be used over JavaScript whenever possible.
+We use Eleventy as the framework, WebC for reusable components, and TailwindCSS for styling. WebC components should use kebab-case filenames and tags (for example `site-shell.webc`), while page files should keep route-friendly kebab-case names (for example `privacy-policy.webc`). When custom code or script is needed, JavaScript should stay minimal and focused on progressive enhancement.
 
 GitHub is used for source code hosting, issue tracking, continuous integration, continuous deployment.
