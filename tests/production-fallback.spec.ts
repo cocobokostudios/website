@@ -14,6 +14,8 @@ test('production HTML ships third-party fallback behaviour for analytics and Mai
   expect(html).toContain('https://www.youtube.com/@cocobokostudios');
   expect(html).toContain('target="_blank"');
 
-  expect(html).toContain("const ANALYTICS_URL = 'https://scripts.simpleanalyticscdn.com/latest.js';");
-  expect(html).toContain("await fetch(ANALYTICS_URL, { mode: 'no-cors'");
+  expect(html).toContain("const ANALYTICS_URLS = [");
+  expect(html).toContain("'/vendor/simple-analytics/latest.js'");
+  expect(html).toContain("'https://scripts.simpleanalyticscdn.com/latest.js'");
+  expect(html).toContain("await fetch(scriptUrl, { mode: 'no-cors'");
 });

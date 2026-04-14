@@ -8,11 +8,12 @@
     "dev": "concurrently \"npm:dev:css\" \"npm:dev:site\"",
     "dev:css": "tailwindcss -i ./src/styles/global.css -o ./public/assets/site.css --watch",
     "dev:site": "eleventy --serve --port=4321",
-    "build": "rimraf dist && npm run build:css && npm run build:site",
+    "build": "rimraf dist && npm run sync:analytics && npm run build:css && npm run build:site",
     "build:css": "tailwindcss -i ./src/styles/global.css -o ./public/assets/site.css --minify",
     "build:site": "eleventy",
     "preview": "http-server dist -a 127.0.0.1 -p 4321 -c-1 --silent",
-    "test:e2e": "playwright test"
+    "test:e2e": "playwright test",
+    "sync:analytics": "node ./scripts/sync-simple-analytics.mjs"
   },
   "dependencies": {
     "@11ty/eleventy": "^3.1.2",
