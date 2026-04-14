@@ -1,6 +1,9 @@
 <script webc:root="override" webc:keep>
   (() => {
-    const MAILERLITE_SCRIPT_URL = 'https://assets.mailerlite.com/js/universal.js';
+    const MAILERLITE_SCRIPT_URLS = [
+      '/vendor/mailerlite/universal.js',
+      'https://assets.mailerlite.com/js/universal.js'
+    ];
     const MAILERLITE_ACCOUNT_ID = '2010388';
 
     const ml = window.ml || function (...args) {
@@ -14,23 +17,33 @@
       window.dispatchEvent(new CustomEvent('mailerlite:unavailable'));
     };
 
-    const loadMailerLite = async () => {
+    const loadScript = async (scriptUrl) => {
       try {
-        await fetch(MAILERLITE_SCRIPT_URL, { mode: 'no-cors', method: 'GET', cache: 'no-store' });
+        await fetch(scriptUrl, { mode: 'no-cors', method: 'GET', cache: 'no-store' });
       } catch {
-        markUnavailable();
-        return;
+        return false;
       }
 
-      const script = document.createElement('script');
-      script.async = true;
-      script.src = MAILERLITE_SCRIPT_URL;
-      script.onerror = markUnavailable;
-      script.onload = () => {
-        window.ml('account', MAILERLITE_ACCOUNT_ID);
-        window.dispatchEvent(new CustomEvent('mailerlite:ready'));
-      };
-      document.head.append(script);
+      return new Promise((resolve) => {
+        const script = document.createElement('script');
+        script.async = true;
+        script.src = scriptUrl;
+        script.onload = () => resolve(true);
+        script.onerror = () => resolve(false);
+        document.head.append(script);
+      });
+    };
+
+    const loadMailerLite = async () => {
+      for (const scriptUrl of MAILERLITE_SCRIPT_URLS) {
+        if (await loadScript(scriptUrl)) {
+          window.ml('account', MAILERLITE_ACCOUNT_ID);
+          window.dispatchEvent(new CustomEvent('mailerlite:ready'));
+          return;
+        }
+      }
+
+      markUnavailable();
     };
 
     void loadMailerLite();
