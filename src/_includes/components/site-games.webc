@@ -1,7 +1,7 @@
 <section id="games" class="py-16 bg-slate-800 text-white">
   <div class="container mx-auto px-4">
     <h2 class="text-4xl font-bold mb-8 text-center">Games</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+    <div class="flex flex-col gap-8 max-w-4xl mx-auto">
       <div webc:for="game of games" class="flex flex-col justify-between h-full block bg-gray-900 p-6 rounded-lg shadow-md w-full">
         <div>
           <img :src="game.image.url" :alt="game.image.alt" class="relative w-full h-48 object-cover rounded-md mb-4">
