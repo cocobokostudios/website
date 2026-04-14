@@ -10,5 +10,5 @@ title: Cocoboko Studios - An Independent Game Studio in Development
   </div>
 </section>
 <site-about></site-about>
-<site-games></site-games>
+<site-games :games="games"></site-games>
 <site-footer></site-footer>

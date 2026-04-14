@@ -23,7 +23,7 @@
     <mailer-lite-header></mailer-lite-header>
   </head>
   <body class="font-['Inter',sans-serif]">
-    <slot></slot>
+    <div @raw="content"></div>
     <site-analytics></site-analytics>
   </body>
 </html>

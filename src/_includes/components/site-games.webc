@@ -2,18 +2,16 @@
   <div class="container mx-auto px-4">
     <h2 class="text-4xl font-bold mb-8 text-center">Games</h2>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-      <template webc:for="game of games">
-        <div class="flex flex-col justify-between h-full block bg-gray-900 p-6 rounded-lg shadow-md w-full">
-          <div>
-            <img :src="game.image.url" :alt="game.image.alt" class="relative w-full h-48 object-cover rounded-md mb-4">
-            <h3 class="relative text-xl font-semibold mb-2" @text="game.title">Game title</h3>
-            <p class="relative text-gray-400" @text="game.description">Game description</p>
-          </div>
-          <span class="relative inline-block mt-4 px-4 py-2 text-xs font-semibold rounded-full bg-blue-700/80 text-white shadow-sm self-start" @text="game.phase">
-            Phase
-          </span>
+      <div webc:for="game of games" class="flex flex-col justify-between h-full block bg-gray-900 p-6 rounded-lg shadow-md w-full">
+        <div>
+          <img :src="game.image.url" :alt="game.image.alt" class="relative w-full h-48 object-cover rounded-md mb-4">
+          <h3 class="relative text-xl font-semibold mb-2" @text="game.title">Game title</h3>
+          <p class="relative text-gray-400" @text="game.description">Game description</p>
         </div>
-      </template>
+        <span class="relative inline-block mt-4 px-4 py-2 text-xs font-semibold rounded-full bg-blue-700/80 text-white shadow-sm self-start" @text="game.phase">
+          Phase
+        </span>
+      </div>
     </div>
   </div>
 </section>
