@@ -6,7 +6,11 @@ test('production HTML ships third-party fallback behaviour for analytics and Mai
 
   const html = await response.text();
 
-  expect(html).toContain("const MAILERLITE_SCRIPT_URL = 'https://assets.mailerlite.com/js/universal.js';");
+  expect(html).toContain("const MAILERLITE_SCRIPT_URLS = [");
+  expect(html).toContain("const MAILERLITE_STUB_MARKER = '__MAILERLITE_VENDOR_STUB__';");
+  expect(html).toContain('delete window[MAILERLITE_STUB_MARKER];');
+  expect(html).toContain('/vendor/mailerlite/universal.js');
+  expect(html).toContain('https://assets.mailerlite.com/js/universal.js');
   expect(html).toContain('mailerlite:unavailable');
   expect(html).toContain('data-mailerlite-fallback');
   expect(html).toContain('Newsletter is coming soon!');
