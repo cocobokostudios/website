@@ -1686,6 +1686,11 @@ video {
      object-fit: cover;
 }
 
+.object-\[50\%_18\%\] {
+  -o-object-position: 50% 18%;
+     object-position: 50% 18%;
+}
+
 .p-4 {
   padding: 1rem;
 }

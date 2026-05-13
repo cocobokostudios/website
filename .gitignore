@@ -3,6 +3,7 @@ dist/
 
 # development output
 public/images/blog/
+public/images/generated/
 
 # generated types
 .cache/
