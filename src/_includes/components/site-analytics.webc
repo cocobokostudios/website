@@ -1,19 +1,34 @@
 <script webc:root="override" webc:keep>
   (() => {
-    const ANALYTICS_URL = 'https://scripts.simpleanalyticscdn.com/latest.js';
+    const ANALYTICS_URLS = [
+      '/vendor/simple-analytics/latest.js',
+      'https://scripts.simpleanalyticscdn.com/latest.js'
+    ];
 
-    const loadAnalytics = async () => {
+    const loadScript = async (scriptUrl) => {
       try {
-        await fetch(ANALYTICS_URL, { mode: 'no-cors', method: 'GET', cache: 'no-store' });
+        await fetch(scriptUrl, { mode: 'no-cors', method: 'GET', cache: 'no-store' });
       } catch {
-        return;
+        return false;
       }
 
-      const script = document.createElement('script');
-      script.async = true;
-      script.dataset.collectDnt = 'true';
-      script.src = ANALYTICS_URL;
-      document.head.append(script);
+      return new Promise((resolve) => {
+        const script = document.createElement('script');
+        script.async = true;
+        script.dataset.collectDnt = 'true';
+        script.src = scriptUrl;
+        script.onload = () => resolve(true);
+        script.onerror = () => resolve(false);
+        document.head.append(script);
+      });
+    };
+
+    const loadAnalytics = async () => {
+      for (const scriptUrl of ANALYTICS_URLS) {
+        if (await loadScript(scriptUrl)) {
+          return;
+        }
+      }
     };
 
     void loadAnalytics();
