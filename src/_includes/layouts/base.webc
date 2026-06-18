@@ -20,7 +20,6 @@
     <title @text="title || 'Cocoboko Studios - An Independent Game Studio in Development'">
       Cocoboko Studios - An Independent Game Studio in Development
     </title>
-    <mailer-lite-header></mailer-lite-header>
   </head>
   <body class="font-['Inter',sans-serif]">
     <div @raw="content"></div>

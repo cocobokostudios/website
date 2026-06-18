@@ -1,0 +1,38 @@
+lockfileVersion: '9.0'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+importers:
+
+  .:
+    dependencies:
+      '@azure/functions':
+        specifier: ^4.8.0
+        version: 4.16.1
+
+packages:
+
+  '@azure/functions-extensions-base@0.3.0':
+    resolution: {integrity: sha512-Cux0hLu5ZXlC/Kb+yvJVhRLIdkfFwui2HeT5oGZL00r/GCUUkhGTzRfZUjRN4Bq729mPv3okPucz2z7SMQLStA==}
+    engines: {node: '>=18.0'}
+
+  '@azure/functions@4.16.1':
+    resolution: {integrity: sha512-A9obwC7IBg4NAmxUfTVfYEd8Xg6Px+o85JRprS3UJZt+GYYzIOmEecnFwTe3rl+aiHDewBk/8fnIVrSjR/fNGQ==}
+    engines: {node: '>=20.0'}
+
+  cookie@0.7.2:
+    resolution: {integrity: sha512-yki5XnKuf750l50uGTllt6kKILY4nQ1eNIQatoXEByZ5dWgnKqbnqmTrBE5B4N7lrMJKQ2ytWMiTO2o0v6Ew/w==}
+    engines: {node: '>= 0.6'}
+
+snapshots:
+
+  '@azure/functions-extensions-base@0.3.0': {}
+
+  '@azure/functions@4.16.1':
+    dependencies:
+      '@azure/functions-extensions-base': 0.3.0
+      cookie: 0.7.2
+
+  cookie@0.7.2: {}
