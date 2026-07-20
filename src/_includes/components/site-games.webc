@@ -1,17 +1,25 @@
-<section id="games" class="py-16 bg-slate-800 text-white">
-  <div class="container mx-auto px-4">
-    <h2 class="text-4xl font-bold mb-8 text-center">Games</h2>
-    <div class="flex flex-col gap-8 max-w-4xl mx-auto">
-      <div webc:for="game of games" class="flex flex-col justify-between h-full block bg-gray-900 p-6 rounded-lg shadow-md w-full">
-        <div>
-          <img :src="game.image.url" :alt="game.image.alt" class="relative w-full h-48 object-cover object-[50%_18%] rounded-md mb-4">
-          <h3 class="relative text-xl font-semibold mb-2" @text="game.title">Game title</h3>
-          <p class="relative text-gray-400" @text="game.description">Game description</p>
-        </div>
-        <span class="relative inline-block mt-4 px-4 py-2 text-xs font-semibold rounded-full bg-blue-700/80 text-white shadow-sm self-start" @text="game.phase">
-          Phase
-        </span>
-      </div>
-    </div>
+<section id="games" class="container mx-auto max-w-6xl px-6 py-20 lg:px-8 lg:py-28">
+  <div class="mx-auto max-w-2xl text-center">
+    <p class="text-sm font-semibold uppercase tracking-[0.2em] text-indigo-600">In development</p>
+    <h2 class="mt-3 text-4xl font-bold tracking-tight text-gray-900">Games</h2>
+    <p class="mt-4 text-lg text-gray-500">Small worlds built around human stories, thoughtful systems, and the joy of discovery.</p>
   </div>
+  <ul class="mt-12 grid gap-6 lg:grid-cols-2">
+    <li webc:for="game of games" class="list-none">
+      <article class="h-full overflow-hidden rounded-lg border border-gray-200 transition hover:border-purple-400 hover:shadow-sm">
+        <img
+          class="aspect-video w-full object-cover"
+          :src="game.image.url"
+          :srcset="game.image.srcset"
+          sizes="(min-width: 1024px) 50vw, 100vw"
+          :alt="game.image.alt"
+        >
+        <div class="p-6">
+          <p class="text-sm font-semibold text-indigo-600" @text="game.phase">Phase</p>
+          <h3 class="mt-2 text-2xl font-bold text-gray-900" @text="game.title">Game title</h3>
+          <p class="mt-3 leading-7 text-gray-500" @text="game.description">Game description</p>
+        </div>
+      </article>
+    </li>
+  </ul>
 </section>

@@ -7,32 +7,19 @@
     <link rel="icon" type="image/png" href="/favicon.png">
     <meta
       name="description"
-      content="Cocoboko Studios is an indie game development team passionate about creating immersive, innovative, and fun experiences for gamers worldwide."
-    >
-    <link rel="preconnect" href="https://fonts.googleapis.com" webc:keep>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin webc:keep>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-      webc:keep
+      :content="description || 'Cocoboko Studios is an indie game development team passionate about creating immersive, innovative, and fun experiences for gamers worldwide.'"
     >
     <link rel="stylesheet" href="/assets/site.css" webc:keep>
+    <script src="/assets/alpine.js" defer webc:keep></script>
     <title @text="title || 'Cocoboko Studios - An Independent Game Studio in Development'">
       Cocoboko Studios - An Independent Game Studio in Development
     </title>
-    <mailer-lite-header></mailer-lite-header>
+    <mailer-lite-header webc:if="usesMailerLite"></mailer-lite-header>
   </head>
-  <body class="font-['Inter',sans-serif]">
-    <div @raw="content"></div>
+  <body class="flex min-h-screen flex-col bg-white font-sans text-gray-700 antialiased">
+    <site-navigation></site-navigation>
+    <div class="flex-1" @raw="content"></div>
+    <site-footer></site-footer>
     <site-analytics></site-analytics>
   </body>
 </html>
-
-<style webc:keep>
-  html,
-  body {
-    margin: 0;
-    width: 100%;
-    min-height: 100%;
-  }
-</style>

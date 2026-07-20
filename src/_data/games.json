@@ -5,7 +5,10 @@
     "phase": "Pre-production",
     "description": "Agent is a narrative-driven micro-simulation where you play as the last human check-in agent at a small international airport. As automation takes over, you’ll navigate quirky requests, shifting policies, and the quiet tension of a world moving on without you while making connections like no machine could ever make.",
     "image": {
+      "source": "agent_website_banner.webp",
+      "widths": [640, 960],
       "url": "/images/generated/agent_website_banner-960.webp",
+      "srcset": "/images/generated/agent_website_banner-640.webp 640w, /images/generated/agent_website_banner-960.webp 960w",
       "alt": "A stylized airport wayfinding sign reading Agent, with a tentative title note below and check-in signs in the background.",
       "creditURL": ""
     }
