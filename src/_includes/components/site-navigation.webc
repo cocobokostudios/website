@@ -1,6 +1,6 @@
 <header class="border-b border-gray-100 bg-white/95 backdrop-blur" webc:root="override">
   <nav
-    class="container mx-auto flex flex-wrap items-center px-6 py-5 lg:px-8"
+    class="container mx-auto flex min-h-20 flex-wrap items-center px-6 lg:px-8"
     aria-label="Primary"
     x-data="{ isOpen: false }"
     x-on:keydown.escape.window="isOpen = false"
