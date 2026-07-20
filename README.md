@@ -44,8 +44,9 @@ src/
   _includes/components/  Reusable WebC components
   _includes/layouts/     Shared WebC layouts
   assets/images/         Original image sources
+  content/               Markdown content pages
   styles/                Tailwind source CSS
-  *.webc                 Page templates
+  *.webc                 WebC application pages
 public/
   images/generated/      Generated responsive images (ignored by Git)
   vendor/                Reviewed third-party script snapshots
@@ -54,7 +55,7 @@ tests/                   Production-facing Playwright tests
 dist/                    Generated production site (ignored by Git)
 ```
 
-WebC is the default template language. Shared navigation, footer, metadata, analytics, and optional integrations belong in `src/_includes/layouts/base.webc`; individual pages should contain only their main content and front matter.
+WebC is the default template language. Shared navigation, footer, metadata, analytics, and optional integrations belong in `src/_includes/layouts/base.webc`. Long-form editorial and policy pages live as Markdown in `src/content/` and use `src/_includes/layouts/content.webc`; interactive or component-driven pages remain WebC templates.
 
 ## Images
 

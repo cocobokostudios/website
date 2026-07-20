@@ -19,6 +19,6 @@ export default function (eleventyConfig) {
     },
     htmlTemplateEngine: "webc",
     markdownTemplateEngine: "njk",
-    templateFormats: ["webc"],
+    templateFormats: ["webc", "md"],
   };
 }

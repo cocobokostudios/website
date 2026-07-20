@@ -1,4 +1,4 @@
-<header class="container mx-auto flex min-h-[calc(100svh-5rem-1px)] max-w-5xl flex-col items-center justify-center px-6 py-24 text-center lg:py-36">
+<header class="container mx-auto flex min-h-[calc(100dvh-5rem-1px)] max-w-5xl flex-col items-center justify-center px-6 py-24 text-center lg:py-36">
   <p class="mb-4 text-sm font-semibold uppercase tracking-[0.2em] text-indigo-600">Independent game studio</p>
   <h1 class="text-5xl font-bold tracking-tighter sm:text-6xl lg:text-7xl">
     <span class="bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">Dream. Discover. Defy.</span>
