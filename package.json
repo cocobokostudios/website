@@ -3,31 +3,35 @@
   "type": "module",
   "version": "1.0.1",
   "private": true,
+  "packageManager": "pnpm@11.15.0",
+  "engines": {
+    "node": ">=22"
+  },
   "description": "Cocoboko Studios website, built with Eleventy and WebC",
   "scripts": {
-    "dev": "npm run build:images && concurrently \"npm:dev:css\" \"npm:dev:site\"",
-    "dev:css": "tailwindcss -i ./src/styles/global.css -o ./public/assets/site.css --watch",
+    "dev": "pnpm run build:images && concurrently \"pnpm run dev:css\" \"pnpm run dev:site\"",
+    "dev:css": "tailwindcss -i ./src/styles/global.css -o ./dist/assets/site.css --watch",
     "dev:site": "eleventy --serve --port=4321",
-    "build": "rimraf dist && npm run sync:analytics && npm run sync:mailerlite && npm run build:css && npm run build:images && npm run build:site",
-    "build:css": "tailwindcss -i ./src/styles/global.css -o ./public/assets/site.css --minify",
+    "build": "rimraf dist && pnpm run verify:vendor && pnpm run build:images && pnpm run build:site && pnpm run build:css",
+    "build:css": "tailwindcss -i ./src/styles/global.css -o ./dist/assets/site.css --minify",
     "build:images": "node scripts/build-images.js",
     "build:site": "eleventy",
     "preview": "http-server dist -a 127.0.0.1 -p 4321 -c-1 --silent",
     "test:e2e": "playwright test",
-    "sync:analytics": "node ./scripts/sync-simple-analytics.mjs",
-    "sync:mailerlite": "node ./scripts/sync-mailerlite.mjs"
-  },
-  "dependencies": {
-    "@11ty/eleventy": "^3.1.2",
-    "@11ty/eleventy-plugin-webc": "^0.11.2",
-    "@tailwindcss/typography": "^0.5.16",
-    "concurrently": "^9.2.1",
-    "http-server": "^14.1.1",
-    "rimraf": "^6.0.1",
-    "tailwindcss": "^3.4.3"
+    "update:vendor": "node ./scripts/sync-simple-analytics.mjs && node ./scripts/sync-mailerlite.mjs && node ./scripts/verify-vendor.mjs --write",
+    "verify:vendor": "node ./scripts/verify-vendor.mjs"
   },
   "devDependencies": {
+    "@11ty/eleventy": "^3.1.6",
     "@11ty/eleventy-img": "^6.0.4",
-    "@playwright/test": "^1.59.1"
+    "@11ty/eleventy-plugin-webc": "^0.11.2",
+    "@playwright/test": "^1.61.1",
+    "@tailwindcss/cli": "^4.3.3",
+    "@tailwindcss/typography": "^0.5.20",
+    "alpinejs": "^3.15.12",
+    "concurrently": "^10.0.3",
+    "http-server": "^14.1.1",
+    "rimraf": "^6.1.3",
+    "tailwindcss": "^4.3.3"
   }
 }

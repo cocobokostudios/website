@@ -1,9 +1,12 @@
 # build output
 dist/
+test-results/
 
 # development output
 public/images/blog/
 public/images/generated/
+public/assets/site.css
+.astro/
 
 # generated types
 .cache/

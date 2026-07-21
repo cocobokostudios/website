@@ -1,0 +1,9 @@
+---
+layout: layouts/base.webc
+---
+<main class="container mx-auto max-w-4xl flex-1 px-6 py-16 lg:px-8 lg:py-24">
+  <article
+    class="prose prose-gray max-w-none prose-headings:tracking-tight prose-a:text-indigo-600"
+    @raw="content"
+  ></article>
+</main>

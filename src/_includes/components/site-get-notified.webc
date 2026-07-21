@@ -1,36 +1,17 @@
-<div class="w-full max-w-xl flex justify-center" webc:root="override">
-  <div class="w-full space-y-4" data-mailerlite-root>
-    <div class="ml-embedded w-full" data-form="b5oxmp" data-mailerlite-embed></div>
+<div class="mx-auto max-w-xl text-left" data-mailerlite-root webc:root="override">
+  <div class="ml-embedded" data-form="b5oxmp" data-mailerlite-embed></div>
 
-    <div
-      class="rounded-lg border border-slate-600 bg-slate-900/70 p-6 text-slate-100"
-      data-mailerlite-fallback
-      aria-live="polite"
-      hidden
-    >
-      <h3 class="text-lg font-semibold">Get notified about releases</h3>
-      <p class="mt-2 text-sm text-slate-300">
+  <template data-mailerlite-fallback-template>
+    <div class="rounded border border-gray-200 bg-gray-50 p-5" data-mailerlite-fallback aria-live="polite">
+      <h3 class="text-lg font-bold text-gray-900">Get notified about releases</h3>
+      <p class="mt-2 text-gray-500">
         Newsletter is coming soon! Come back soon for updates, or follow us on
-        <a
-          href="https://bsky.app/profile/cocobokostudios.bsky.social"
-          target="_blank"
-          rel="noreferrer"
-          class="underline underline-offset-2 transition hover:text-white"
-        >
-          BlueSky
-        </a>
+        <a class="font-medium text-indigo-600 underline" href="https://bsky.app/profile/cocobokostudios.bsky.social" target="_blank" rel="noreferrer">BlueSky</a>
         or
-        <a
-          href="https://www.youtube.com/@cocobokostudios"
-          target="_blank"
-          rel="noreferrer"
-          class="underline underline-offset-2 transition hover:text-white"
-        >
-          YouTube
-        </a>
+        <a class="font-medium text-indigo-600 underline" href="https://www.youtube.com/@cocobokostudios" target="_blank" rel="noreferrer">YouTube</a>.
       </p>
     </div>
-  </div>
+  </template>
 </div>
 
 <script webc:keep>
@@ -39,16 +20,18 @@
     if (!root) return;
 
     const embed = root.querySelector('[data-mailerlite-embed]');
-    const fallback = root.querySelector('[data-mailerlite-fallback]');
+    const fallbackTemplate = root.querySelector('[data-mailerlite-fallback-template]');
 
-    if (!embed || !fallback) return;
+    if (!embed || !fallbackTemplate) return;
 
     const showFallback = () => {
-      fallback.hidden = false;
+      if (!root.querySelector('[data-mailerlite-fallback]')) {
+        fallbackTemplate.before(fallbackTemplate.content.cloneNode(true));
+      }
     };
 
     const hideFallback = () => {
-      fallback.hidden = true;
+      root.querySelector('[data-mailerlite-fallback]')?.remove();
     };
 
     const observeEmbedState = () => {

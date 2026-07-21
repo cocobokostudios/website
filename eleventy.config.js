@@ -6,6 +6,9 @@ export default function (eleventyConfig) {
   });
 
   eleventyConfig.addPassthroughCopy({ public: "/" });
+  eleventyConfig.addPassthroughCopy({
+    "node_modules/alpinejs/dist/cdn.min.js": "assets/alpine.js",
+  });
 
   return {
     dir: {
@@ -16,6 +19,6 @@ export default function (eleventyConfig) {
     },
     htmlTemplateEngine: "webc",
     markdownTemplateEngine: "njk",
-    templateFormats: ["webc"],
+    templateFormats: ["webc", "md"],
   };
 }

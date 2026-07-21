@@ -1,26 +1,23 @@
-<section class="bg-gray-900 py-20">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <h2 id="about" class="text-4xl font-bold text-white text-center mb-16">About</h2>
-
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-      <div class="bg-slate-800 aspect-[3/2] rounded-lg overflow-hidden">
-        <img
-          src="/images/dw_controller-coffee-desk.jpg"
-          alt="Cocoboko Studios Team"
-          class="w-full h-full object-cover brightness-110 contrast-105 sepia-[0.05]"
-        >
-      </div>
-
-      <div class="space-y-8">
-        <h3 class="text-2xl font-bold text-purple-500 mb-4">The Goal</h3>
-        <p class="text-gray-300 leading-relaxed">
-          Cocoboko Studios is a passion-driven attempt to chase dreams and spark that same drive in others.
-        </p>
-
-        <p class="text-gray-300 leading-relaxed">
-          Started in 2024 after nearly twenty years of quiet persistence-a creative space carved out to make commercial games that blend exploration, storytelling, simulation, and economics. Built outside ideal conditions, the studio exists not to chase trends, but to make space for the kinds of games that deserve more light.
-        </p>
-      </div>
+<section id="about" class="border-y border-gray-100 bg-gray-50">
+  <div class="container mx-auto grid max-w-6xl gap-12 px-6 py-20 lg:grid-cols-2 lg:items-center lg:px-8 lg:py-28">
+    <img
+      class="aspect-[4/3] w-full rounded-lg object-cover"
+      src="/images/generated/studio-desk-960.webp"
+      srcset="/images/generated/studio-desk-480.webp 480w, /images/generated/studio-desk-960.webp 960w, /images/generated/studio-desk-1440.webp 1440w"
+      sizes="(min-width: 1024px) 50vw, 100vw"
+      width="960"
+      height="540"
+      alt="A game controller beside a cup of coffee on a desk"
+    >
+    <div>
+      <p class="text-sm font-semibold uppercase tracking-[0.2em] text-indigo-600">About</p>
+      <h2 class="mt-3 text-4xl font-bold tracking-tight text-gray-900">The Goal</h2>
+      <p class="mt-6 text-lg leading-8 text-gray-600">
+        Cocoboko Studios is a passion-driven attempt to chase dreams and spark that same drive in others.
+      </p>
+      <p class="mt-4 leading-7 text-gray-500">
+        Started in 2024 after nearly twenty years of quiet persistence—a creative space carved out to make commercial games that blend exploration, storytelling, simulation, and economics. Built outside ideal conditions, the studio exists not to chase trends, but to make space for the kinds of games that deserve more light.
+      </p>
     </div>
   </div>
 </section>

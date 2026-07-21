@@ -4,8 +4,8 @@
     "cocoboko-website": {
       "appLocation": ".",
       "outputLocation": "dist",
-      "appBuildCommand": "npm run build",
-      "run": "npm run preview",
+      "appBuildCommand": "pnpm run build",
+      "run": "pnpm run preview",
       "appDevserverUrl": "http://localhost:4321"
     }
   }
