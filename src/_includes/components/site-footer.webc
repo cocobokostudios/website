@@ -8,6 +8,7 @@
       <ul class="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm">
         <li><a class="text-gray-500 underline hover:text-indigo-600" href="/privacy-policy">Privacy Policy</a></li>
         <li><a class="text-gray-500 underline hover:text-indigo-600" href="/code-of-conduct">Code of Conduct</a></li>
+        <li><a class="text-gray-500 underline hover:text-indigo-600" href="/generative-ai-disclosure">Generative AI Disclosure</a></li>
         <li><a class="text-gray-500 underline hover:text-indigo-600" href="/credits">Credits</a></li>
       </ul>
     </nav>
