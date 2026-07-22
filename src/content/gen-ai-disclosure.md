@@ -28,7 +28,7 @@ We currently use GenAI to assist with tasks such as:
 - Audio transcription
 - Spreadsheet and budgeting assistance
 - Resource and data modelling
-- Code assistance, learning, testing, and refactoring
+- Code assistance, learning, testing, experimentation, and refactoring
 
 These uses are intended to support our work—not replace human decision-making or creative ownership.
 
