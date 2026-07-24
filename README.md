@@ -65,7 +65,7 @@ Generated images and the compiled stylesheet are build artifacts and are not com
 
 ## Vendored scripts
 
-Production builds do not download third-party JavaScript. Committed MailerLite and Simple Analytics snapshots are checked against `scripts/vendor-lock.json` on every build.
+Production builds do not download third-party JavaScript. The browser loads the committed MailerLite snapshot from the site's own `/vendor/` path, while committed MailerLite and Simple Analytics snapshots are checked against `scripts/vendor-lock.json` on every build.
 
 To intentionally update both scripts and refresh their checksums:
 

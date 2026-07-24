@@ -6,12 +6,13 @@ permalink: /privacy-policy/index.html
 
 # Privacy Policy
 
-_Last updated: December 31, 2025_
+_Last updated: July 24, 2026_
 
 ## On this page
 
 - [Website analytics (Simple Analytics)](#website-analytics)
 - [Email updates (MailerLite)](#email-updates)
+  - [How to unsubscribe](#how-to-unsubscribe)
 
 <a id="website-analytics"></a>
 
@@ -61,9 +62,10 @@ If you choose to sign up for email updates, we use **MailerLite** to collect and
 - To send occasional updates you have opted in to receive
 - To maintain the mailing list (for example: preventing duplicates and honoring unsubscribe requests)
 
-### Your choices
+### How to unsubscribe
 
-- You can unsubscribe at any time using the link in any email
-- If you want your email removed entirely, you can contact us and we will delete it from our list
+Every email update includes an **Unsubscribe** link in its footer. Some email providers may also display an unsubscribe option near the sender information. You can use either option at any time. MailerLite will remove your address from the active mailing list so that you no longer receive newsletters or automated email updates.
+
+If you want your email address removed entirely rather than retained as an unsubscribed record, you can contact us and ask us to delete it from our mailing list.
 
 MailerLite may process this information on our behalf to provide the email service. We do not sell your email address.

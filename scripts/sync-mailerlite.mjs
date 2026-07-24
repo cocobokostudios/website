@@ -11,6 +11,18 @@ const SOURCE_URLS = [
   'https://assets.mailerlite.com/js/universal.js'
 ];
 const OUTPUT_PATH = resolve('public/vendor/mailerlite/universal.js');
+const EMBEDDED_FORM_REQUEST =
+  'this.jsonpRequest.make(`/jsonp/${t}/forms/${e}`,"renderEmbeddedForm")';
+const FRESH_EMBEDDED_FORM_REQUEST =
+  'this.jsonpRequest.make(`/jsonp/${t}/forms/${e}`,"renderEmbeddedForm",{cache:Date.now().toString()})';
+
+const prepareScript = (script) => {
+  if (!script.includes(EMBEDDED_FORM_REQUEST)) {
+    throw new Error('Unable to locate the MailerLite embedded-form request.');
+  }
+
+  return script.replace(EMBEDDED_FORM_REQUEST, FRESH_EMBEDDED_FORM_REQUEST);
+};
 
 const downloadWithFetch = async (sourceUrl) => {
   const response = await fetch(sourceUrl, {
@@ -64,7 +76,7 @@ const syncMailerLite = async () => {
   }
 
   await mkdir(dirname(OUTPUT_PATH), { recursive: true });
-  await writeFile(OUTPUT_PATH, script, 'utf8');
+  await writeFile(OUTPUT_PATH, prepareScript(script), 'utf8');
   console.log(`Synced MailerLite script to ${OUTPUT_PATH}`);
 };
 

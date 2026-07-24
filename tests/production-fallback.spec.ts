@@ -16,23 +16,19 @@ for (const route of routes) {
   });
 }
 
-test('production HTML ships third-party fallback behaviour for analytics and MailerLite', async ({ request }) => {
+test('production HTML ships first-party MailerLite and resilient analytics loading', async ({ request }) => {
   const response = await request.get('/');
   expect(response.ok()).toBeTruthy();
 
   const html = await response.text();
 
-  expect(html).toContain("const MAILERLITE_SCRIPT_URLS = [");
-  expect(html).toContain("const MAILERLITE_STUB_MARKER = '__MAILERLITE_VENDOR_STUB__';");
-  expect(html).toContain('delete window[MAILERLITE_STUB_MARKER];');
-  expect(html).toContain('/vendor/mailerlite/universal.js');
-  expect(html).toContain('https://assets.mailerlite.com/js/universal.js');
-  expect(html).toContain('mailerlite:unavailable');
-  expect(html).toContain('data-mailerlite-fallback');
-  expect(html).toContain('Newsletter is coming soon!');
-  expect(html).toContain('https://bsky.app/profile/cocobokostudios.bsky.social');
-  expect(html).toContain('https://www.youtube.com/@cocobokostudios');
-  expect(html).toContain('target="_blank"');
+  expect(html).toContain('src="/vendor/mailerlite/universal.js"');
+  expect(html).not.toContain('https://assets.mailerlite.com/js/universal.js');
+  expect(html).toContain('min-h-[405px]');
+  expect(html).toContain('data-mailerlite-placeholder');
+  expect(html).toContain('Loading the newsletter signup form…');
+  expect(html).not.toContain('data-mailerlite-fallback');
+  expect(html).not.toContain('mailerlite:unavailable');
 
   expect(html).toContain("const ANALYTICS_URLS = [");
   expect(html).toContain("'/vendor/simple-analytics/latest.js'");
@@ -45,10 +41,20 @@ test('MailerLite is only loaded on the page that contains its form', async ({ re
     const response = await request.get(route);
     const html = await response.text();
 
-    expect(html).not.toContain('const MAILERLITE_SCRIPT_URLS = [');
+    expect(html).not.toContain('src="/vendor/mailerlite/universal.js"');
     expect(html).not.toContain('data-mailerlite-root');
     expect(html).toContain('const ANALYTICS_URLS = [');
   }
+});
+
+test('vendored MailerLite requests the latest embedded form definition', async ({ request }) => {
+  const response = await request.get('/vendor/mailerlite/universal.js');
+  expect(response.ok()).toBeTruthy();
+
+  const script = await response.text();
+  expect(script).toContain(
+    'this.jsonpRequest.make(`/jsonp/${t}/forms/${e}`,"renderEmbeddedForm",{cache:Date.now().toString()})',
+  );
 });
 
 test('compiled assets and generated images are available', async ({ request }) => {
