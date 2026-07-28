@@ -22,7 +22,7 @@ While GenAI can produce text, images, audio, and other creative outputs, we do n
 
 We currently use GenAI to assist with tasks such as:
 
-- Brainstorming and ideation
+- Brainstorming and idea refinement
 - Concept refinement
 - Writing assistance (editing, grammar, formatting, and proofreading)
 - Audio transcription
