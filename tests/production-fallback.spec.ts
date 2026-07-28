@@ -24,6 +24,7 @@ test('production HTML ships first-party MailerLite and resilient analytics loadi
 
   expect(html).toContain('src="/vendor/mailerlite/universal.js"');
   expect(html).not.toContain('https://assets.mailerlite.com/js/universal.js');
+  expect(html).toContain('data-form="2g04OZ"');
   expect(html).toContain('min-h-[405px]');
   expect(html).toContain('data-mailerlite-placeholder');
   expect(html).toContain('Loading the newsletter signup form…');
