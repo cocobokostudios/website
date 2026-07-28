@@ -8,7 +8,7 @@ permalink: /generative-ai-disclosure/index.html
 
 # Generative AI Disclosure
 
-_Last Updated: July 21, 2026_
+_Last Updated: July 28, 2026_
 
 At Cocoboko Studios, we believe that generative AI (GenAI) is a software tool—no different in principle than a compiler, search engine, spreadsheet, or photo editor. Like any tool, its value depends on how it is used.
 
@@ -22,7 +22,7 @@ While GenAI can produce text, images, audio, and other creative outputs, we do n
 
 We currently use GenAI to assist with tasks such as:
 
-- Brainstorming and idea refinement
+- Brainstorming
 - Concept refinement
 - Writing assistance (editing, grammar, formatting, and proofreading)
 - Audio transcription
