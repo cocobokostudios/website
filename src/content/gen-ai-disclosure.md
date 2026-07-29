@@ -25,7 +25,7 @@ We currently use GenAI to assist with tasks such as:
 - Brainstorming
 - Concept refinement
 - Writing assistance (editing, grammar, formatting, and proofreading)
-- Image editing and clean-up
+- Marketing asset editing and clean-up
 - Audio transcription
 - Spreadsheet and budgeting assistance
 - Resource and data modelling
