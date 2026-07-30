@@ -78,16 +78,3 @@ Review the resulting vendor diffs before committing them.
 ## Deployment
 
 Any static host can serve the `dist/` directory. `swa-cli.config.json` is retained for Azure Static Web Apps local tooling; the site has no Netlify-specific requirements.
-
-The Azure Pipeline builds and tests changes from Azure Repos `main`, deploys the
-result to the production Azure Static Web App, and then pushes the exact deployed
-commit to `main` in the downstream GitHub repository. The downstream push is a
-normal fast-forward push; divergence, authentication errors, and Git LFS upload
-errors fail the pipeline even though the production deployment has already
-completed.
-
-Configure `GITHUB_PUSH_TOKEN` as a secret Azure Pipeline variable. It must be a
-fine-grained GitHub personal access token for `cocobokostudios/website` with
-read/write **Contents** permission, and the repository's branch rules must allow
-the token owner to push directly to `main`. Never commit the token to this
-repository or add it as a plain-text YAML variable.
