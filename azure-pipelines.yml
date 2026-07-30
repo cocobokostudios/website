@@ -91,3 +91,29 @@ stages:
                     skip_app_build: true
                     skip_api_build: true
                     azure_static_web_apps_api_token: '$(AZURE_STATIC_WEB_APPS_API_TOKEN)'
+
+                - checkout: self
+                  displayName: Check out deployed source
+                  clean: true
+                  fetchDepth: 0
+                  lfs: true
+
+                - bash: |
+                    set -euo pipefail
+
+                    if [ -z "${GITHUB_PUSH_TOKEN:-}" ]; then
+                      echo "##vso[task.logissue type=error]GITHUB_PUSH_TOKEN is not configured."
+                      exit 1
+                    fi
+
+                    read -r auth_header < <(
+                      printf 'x-access-token:%s' "$GITHUB_PUSH_TOKEN" | base64 -w 0
+                      printf '\n'
+                    )
+
+                    git -c "http.https://github.com/.extraheader=AUTHORIZATION: basic ${auth_header}" \
+                      push https://github.com/cocobokostudios/website.git \
+                      "$(Build.SourceVersion):refs/heads/main"
+                  displayName: Push deployed commit to GitHub
+                  env:
+                    GITHUB_PUSH_TOKEN: $(GITHUB_PUSH_TOKEN)
