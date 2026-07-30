@@ -1,0 +1,93 @@
+trigger:
+  batch: true
+  branches:
+    include:
+      - main
+
+# Azure Repos PR validation is configured through a build-validation branch
+# policy on main, rather than through YAML PR triggers.
+pr: none
+
+variables:
+  pnpmStorePath: '$(Pipeline.Workspace)/.pnpm-store'
+
+stages:
+  - stage: Build
+    displayName: Build and test
+    jobs:
+      - job: Build
+        displayName: Build and test site
+        pool:
+          vmImage: ubuntu-latest
+        steps:
+          - checkout: self
+            lfs: true
+
+          - task: UseNode@1
+            displayName: Use Node.js 24
+            inputs:
+              version: '24.x'
+
+          - script: corepack enable
+            displayName: Enable Corepack
+
+          - task: Cache@2
+            displayName: Cache pnpm store
+            inputs:
+              key: 'pnpm | "$(Agent.OS)" | pnpm-lock.yaml'
+              restoreKeys: |
+                pnpm | "$(Agent.OS)"
+              path: '$(pnpmStorePath)'
+
+          - script: pnpm config set store-dir "$(pnpmStorePath)"
+            displayName: Configure pnpm store
+
+          - script: pnpm install --frozen-lockfile
+            displayName: Install dependencies
+
+          - script: pnpm build
+            displayName: Build site
+
+          - script: pnpm test:e2e
+            displayName: Test site
+
+          - publish: dist
+            artifact: dist
+            displayName: Publish site artifact
+
+  - stage: Deploy
+    displayName: Deploy production
+    dependsOn: Build
+    condition: >-
+      and(
+        succeeded(),
+        eq(variables['Build.SourceBranch'], 'refs/heads/main'),
+        in(variables['Build.Reason'], 'IndividualCI', 'BatchedCI')
+      )
+    jobs:
+      - deployment: DeployProduction
+        displayName: Deploy Azure Static Web App
+        environment: production
+        pool:
+          vmImage: ubuntu-latest
+        strategy:
+          runOnce:
+            deploy:
+              steps:
+                - download: none
+
+                - task: DownloadPipelineArtifact@2
+                  displayName: Download site artifact
+                  inputs:
+                    artifact: dist
+                    path: '$(System.DefaultWorkingDirectory)/dist'
+
+                - task: AzureStaticWebApp@0
+                  displayName: Deploy to Azure Static Web Apps
+                  inputs:
+                    app_location: dist
+                    api_location: ''
+                    output_location: ''
+                    skip_app_build: true
+                    skip_api_build: true
+                    azure_static_web_apps_api_token: '$(AZURE_STATIC_WEB_APPS_API_TOKEN)'
